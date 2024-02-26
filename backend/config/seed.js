@@ -76,6 +76,15 @@ const Item = require('../models/Item');
     {name: 'Thai Tea', category: categories[7], price: 3.49},
     {name: 'Ramunee(Strawberry)', category: categories[7], price: 3.75},
     {name: 'Ramunee(Original)', category: categories[7], price: 3.75},
+
+    {name: 'Extra Noodle', category: categories[8], price: 2.50},
+    {name: 'Chashu Pork (2 slices)', category: categories[8], price: 2.50},
+    {name: 'Big Shrimp (2 slices)', category: categories[8], price: 3.50},
+    {name: 'Corn', category: categories[8], price: 2.00},
+    {name: 'Bamboo Shoot', category: categories[8], price: 2.00},
+    {name: 'Egg', category: categories[8], price: 1.00},
+    {name: 'Wood Ear', category: categories[8], price: 2.00},
+    {name: 'Kimchi', category: categories[8], price: 2.50},
   ]);
 
   console.log(items)
