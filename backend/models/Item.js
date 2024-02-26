@@ -8,7 +8,7 @@ const itemSchema = new Schema({
   rawemoji: { type: String },
   favemoji: { type: String },
   category: { type: Schema.Types.ObjectId, ref: 'Category' },
-  description: {type: String},
+  description: { type: String },
   price: { type: Number, required: true, default: 0 }
 }, {
   timestamps: true
