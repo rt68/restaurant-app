@@ -1,6 +1,9 @@
 require('dotenv').config();
 require('./database');
 
+
+//input menu items depending on restaurant
+
 const Category = require('../models/Category');
 const Item = require('../models/Item');
 
