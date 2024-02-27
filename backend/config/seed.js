@@ -68,6 +68,37 @@ const Item = require('../models/Item');
     {name: 'Yellowtail(2pc)', category: categories[4], price: 5.50},
     {name: 'Eel(2pc)', category: categories[4], price: 5.95},
     {name: 'Crabstick(2pc)', category: categories[4], price: 4.25},
+    
+    {name: 'Bruce Roll', description:" Lump Crab & Shrimp Tempura inside Avocado layer on top & Eel Sauce", category: categories[5], price: 14.95},
+    {name: 'Dragon Roll', description:"Eel Cucumber inside, Avocado & Eel sauce & fish egg", category: categories[5], price: 12.95},
+    {name: 'Big Boss Roll', description:"Lump Crab Meat, Shrimp Tempura inside, Eel,Avocado on top, Eel sauce and sesame", category: categories[5], price: 17.95},
+    {name: 'Tuna Bonfire Roll', description:" Spicy Tuna & Jalapeno inside, Topped with Tuna & Avocado", category: categories[5], price: 12.95},
+    {name: 'Godzilla Roll', description:"Avocado, Tuna, White fish, Cheese and Spicy mayo all deep-fried topped with Spicy mayo and Eel Sauce.", category: categories[5], price: 12.95},
+    {name: 'Lava Roll', description:"Spicy Tuna and Seasoned Lump Crab inside. White Fish and Avocado on top with Spicy Mayo.", category: categories[5], price: 14.95},
+    {name: 'Rainbow Roll', description:"Crab meat Cucumber and Avocado inside W. Salmon, Tuna, White Tuna and Shrimp.",category: categories[5], price: 13.95},
+    {name: 'Old Town Roll', cdescription:"  Shrimp Tempura Avocado Inside, Creamy Spicy Crab Meat and Crunchy on top W/ Eel Sauce, Spicy Mayo.", category: categories[5], price: 12.95},
+
+    {name: 'Chesapeake Roll', description:" Old Bay-Seasoned Lump Crab and Avacado", category: categories[5], price: 8.95},
+    {name: 'Monkey Roll', description:"Shrimp Tempura & Cucumber inside. Avacado layered on top w.Three kinds of sause on top", category: categories[5], price: 12.95},
+    {name: 'American Dream Roll', description:"Shrimp Tempur inside. Steam Shrimp on the top W.Eel & Spicy Mayo Sauce", category: categories[5], price: 12.95},
+    {name: 'Cook Dynamite Roll', description:" Salmon,Tuna and White Fish Topped with Spicy Mayo and Lightly Broiled", category: categories[5], price: 14.95},
+    {name: '"I Like That" Roll', description:"Shrimp and Avacado inside. Whole Roll Fried. Seasoned Lump Crab on Top W.Sriracha", category: categories[5], price: 15.95},
+    {name: 'James Town Roll', description:"Spicy Yellowtail insidel. Topped with Tuna, White Fish, Scallion, Fish Egg.",category: categories[5], price: 12.95},
+    {name: 'Royal Crab Roll', cdescription:"California Roll inside. Topped with Lump Crab & Avacado", category: categories[5], price: 13.95},
+    {name: 'Spicy Girl Roll', description:"Spicy Tuna. Spicy Salmon and Spicy yellowtail inside.Avacado layered on top w.Spicy Mayo&crunchy Flake.", category: categories[5], price: 14.95},
+    
+    {name: 'Crispy Dragon Roll', description:"Crab Stick Tempura and Eel inside.Topped with Avacado.Eel sauce and Crunchy Flake", category: categories[5], price: 14.95},
+    {name: 'Tiger Roll', description:"Shrimp Tempura, Cream Cheese and Spicy Crab Meat W.Soy Wrap and Eel Sauce", category: categories[5], price: 10.95},
+    {name: 'Salmon Lover Roll', description:"Spicy Salmon & Avocado inside. Topped with Salmon and fish egg.", category: categories[5], price: 13.95},
+    {name: 'Crunchy Roll', description:"Lump Crab, Steam Shrimp, Avacado.Top with OLD BAY & Crunchy Flake.", category: categories[5], price: 10.95},
+    {name: 'Volcano Roll', description:"Crab Stick,Tuna,Cucumber Whole Roll Deep Fried. Topped with Mayonnaise, Sriracha and Eel Sauce.", category: categories[5], price: 8.95},
+    {name: 'Las Vegas Roll', description:"Whole Roll Fried with Salmon, Cream Cheese and steam shrimp, Top w.Eel & Spicy Mayo",category: categories[5], price: 12.95},
+    {name: 'Salmon Lover Roll', cdescription:"Spicy salmon & Avocado inside. Topped with Salmon and fish egg", category: categories[5], price: 13.95},
+    {name: 'Crispy Mango Roll', description:"Tuna and Salmon Tempura inside. Topped with Slices of Mango and Drizzle with Sweet Mango Sauce and Crunchy Flake.", category: categories[5], price: 13.95},
+
+
+
+    
 
     {name: 'Avocado Roll', category: categories[6], price: 4.25},
     {name: 'Cucumber Roll', category: categories[6], price: 4.25},
