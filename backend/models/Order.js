@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const itemSchema = require('./ItemSchema');
+const itemSchema = require('./Item');
 
 const lineItemSchema = new Schema({
   qty: { type: Number, default: 1 },
