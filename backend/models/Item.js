@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 require('./Category');
 
 const itemSchema = new Schema({
+  img: {type: String},
   name: { type: String, required: true },
   rawemoji: { type: String },
   favemoji: { type: String },
