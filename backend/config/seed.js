@@ -9,37 +9,69 @@ const Item = require("../models/Item");
 (async function () {
   await Category.deleteMany({});
   const categories = await Category.create([
-    {name: 'Ramen Bowls', sortOrder: 10},
-    {name: 'Appetizers', sortOrder: 20},
-    {name: 'Rice and Noodle', sortOrder: 30},
-    {name: 'Salad', sortOrder: 40},
-    {name: 'Sushi & Sashimi', sortOrder: 50},
-    {name: 'Chef Special Roll', sortOrder: 60},
-    {name: 'Regular Roll', sortOrder: 70},
-    {name: "Drink", sortOrder: 80},
-    {name: "Extras", sortOrder: 90},
-
-    {name: 'Sandwiches', sortOrder: 10},
-    {name: 'Seafood', sortOrder: 20},
-    {name: 'Mexican', sortOrder: 30},
-    {name: 'Italian', sortOrder: 40},
-    {name: 'Sides', sortOrder: 50},
-    {name: 'Desserts', sortOrder: 60},
-    {name: 'Drinks', sortOrder: 70},
-
+    { name: "Ramen Bowls", sortOrder: 10 },
+    { name: "Appetizers", sortOrder: 20 },
+    { name: "Rice and Noodle", sortOrder: 30 },
+    { name: "Salad", sortOrder: 40 },
+    { name: "Sushi & Sashimi", sortOrder: 50 },
+    { name: "Chef Special Roll", sortOrder: 60 },
+    { name: "Regular Roll", sortOrder: 70 },
+    { name: "Drink", sortOrder: 80 },
+    { name: "Extras", sortOrder: 90 },
   ]);
 
   await Item.deleteMany({});
   const items = await Item.create([
-
-    {name: 'Tonkotsu Ramen', description:"Cha Shu, Corn, Bamboo Shoot, Wood Ear, Egg, Scallion", category: categories[0], price: 14.49},
-    {name: 'Miso Ramen', description:"Cha Shu, Corn, Bamboo Shoot, Wood Ear, Egg, Scallion", category: categories[0], price: 14.49},
-    {name: 'Kimchi Ramen', description:"Cha Shu, Kimchi, Corn, Bamboo Shoot, Wood Ear, Egg, Scallion", category: categories[0], price: 15.49},
-    {name: 'Vegetable Ramen', description:"Tofu, Broccoli, Wood Ear, Corn, Scallion, Radish, Bamboo Shoot", category: categories[0], price: 15.49},
-    {name: 'Shoyu Ramen', description:"Cha Shu, Corn, Bamboo Shoot, Wood Ear, Egg, Scallion", category: categories[0], price: 15.49},
-    {name: 'Hell Ramen', description:"Cha Shu, Corn, Bamboo Shoot, Wood Ear, Egg, Scallion",category: categories[0], price: 18.49},
-    {name: 'Chicken Ramen', cdescription:"Chicken, Corn, Bamboo Shoot, Wood Ear, Egg, Scallion", category: categories[0], price: 16.49},
-    {name: 'Seafood Ramen', description: "Scallion, Shrimp, Fish Cake, Mussel, Tofu, Corn", category: categories[0], price: 18.49},
+    {
+      name: "Tonkotsu Ramen",
+      description: "Cha Shu, Corn, Bamboo Shoot, Wood Ear, Egg, Scallion",
+      category: categories[0],
+      price: 14.49,
+    },
+    {
+      name: "Miso Ramen",
+      description: "Cha Shu, Corn, Bamboo Shoot, Wood Ear, Egg, Scallion",
+      category: categories[0],
+      price: 14.49,
+    },
+    {
+      name: "Kimchi Ramen",
+      description:
+        "Cha Shu, Kimchi, Corn, Bamboo Shoot, Wood Ear, Egg, Scallion",
+      category: categories[0],
+      price: 15.49,
+    },
+    {
+      name: "Vegetable Ramen",
+      description:
+        "Tofu, Broccoli, Wood Ear, Corn, Scallion, Radish, Bamboo Shoot",
+      category: categories[0],
+      price: 15.49,
+    },
+    {
+      name: "Shoyu Ramen",
+      description: "Cha Shu, Corn, Bamboo Shoot, Wood Ear, Egg, Scallion",
+      category: categories[0],
+      price: 15.49,
+    },
+    {
+      name: "Hell Ramen",
+      description: "Cha Shu, Corn, Bamboo Shoot, Wood Ear, Egg, Scallion",
+      category: categories[0],
+      price: 18.49,
+    },
+    {
+      name: "Chicken Ramen",
+      cdescription: "Chicken, Corn, Bamboo Shoot, Wood Ear, Egg, Scallion",
+      category: categories[0],
+      price: 16.49,
+    },
+    {
+      name: "Seafood Ramen",
+      description: "Scallion, Shrimp, Fish Cake, Mussel, Tofu, Corn",
+      category: categories[0],
+      price: 18.49,
+    },
 
     { name: "Edamame", category: categories[1], price: 5.99 },
     {
