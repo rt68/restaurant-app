@@ -4,7 +4,7 @@ import * as ordersAPI from '../../utilities/orders-api';
 import styles from './NewOrder.module.css';
 import { Link, useNavigate } from 'react-router-dom';
 // import Logo from '../../components/Logo/Logo';
-// import MenuList from '../../components/MenuList/MenuList.js';
+import MenuList from '../../components/MenuList/MenuList.js';
 // import CategoryList from '../../components/CategoryList/CategoryList';
 // import OrderDetail from '../../components/OrderDetail/OrderDetail';
 import UserLogOut from '../../components/UserLogOut/UserLogOut';
@@ -65,10 +65,10 @@ export default function NewOrder({ user, setUser }) {
         <Link to="/orders" className="button btn-sm">PREVIOUS ORDERS</Link>
         <UserLogOut user={user} setUser={setUser} />
       </aside>
-      {/* <MenuList
+      <MenuList
         menuItems={menuItems.filter(item => item.category.name === activeCat)}
         handleAddToOrder={handleAddToOrder}
-      /> */}
+      />
       {/* <OrderDetail
         order={cart}
         handleChangeQty={handleChangeQty}
