@@ -18,6 +18,7 @@ const LoginForm = ({ setUser }) => {
     e.preventDefault();
     try {
       const user = await usersService.logIn(credentials);
+      console.log(user)
       setUser(user);
     } catch (error) {
       setError("Login Failed - Try Again");
