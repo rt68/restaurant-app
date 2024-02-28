@@ -1,6 +1,6 @@
 
 //imports
-// import './App.css';
+import './App.css';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { useState, useRef, useEffect } from 'react';
 import { getUser } from './utilities/users-service'
@@ -72,14 +72,3 @@ function App() {
 
 export default App;
 
-
-
-//<Routes>
-//<Route path="/" element={ <Landing />} />
-{/* <Route path="/menu" element={<Menu />} /> */}
-//<Route path="/menu" element={<CategoryList  categories={categoriesRef.current} activeCat={activeCat} setActiveCat={setActiveCat}/>} /> 
-//<Route path="/menu/categories" element={<LineItem/>}></Route>
-//<Route path="/login" element={<Auth setuser={setUser}/>} />
-{/* <Route path="/orders" element={<OrderHistory />} />
-<Route path="/*" element={<Navigate to="/orders/new" />} /> */}
-//</Routes>
