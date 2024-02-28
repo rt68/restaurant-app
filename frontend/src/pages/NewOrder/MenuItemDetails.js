@@ -32,8 +32,9 @@ function MenuItemDetail() {
   }
   return (
     <div>
-      <h1>{item.name}</h1> <h3>Description: {item.description}</h3>
-      <p>Pirce: {item.price}</p>
+      <h1>{item.name}</h1> 
+      {item.description?<h3>Description: {item.description}</h3>: ""}
+      <p>Price: {item.price}</p>
       {item.img && (
         <img
           src={item.img}

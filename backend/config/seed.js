@@ -30,6 +30,7 @@ const Item = require("../models/Item");
       price: 14.49,
     },
     {
+      img: "https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047105/Ramen%20Time%20Images/SPICY-MISO-MISO-RAMEN_foltiz.png",
       name: "Miso Ramen",
       description: "Cha Shu, Corn, Bamboo Shoot, Wood Ear, Egg, Scallion",
       category: categories[0],
