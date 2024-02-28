@@ -39,10 +39,10 @@ export default function Nav({ user, setUser }) {
         </>
       ) : (
         <>
+        <Link to="/menu">Menu</Link>
+        &nbsp; | &nbsp;
           {" "}
           <Link to="/users">Sign Up/Log In</Link>
-          &nbsp; | &nbsp;
-          <Link to="/menu">Menu</Link>
         </>
       )}
       {/* <Link to="/login">Login</Link>  &nbsp; | &nbsp;
