@@ -6,11 +6,11 @@ export default function MenuListItem({ menuItem, handleAddToOrder }) {
     <div className={styles.MenuListItem}>
       <Link to={`/menu/category/${menuItem._id}`} className="menu-item-link">
       <div className={styles.img + " " + "flex-ctr-ctr"}>
-        <img
+        {menuItem.img && <img
           src={menuItem.img}
           alt={menuItem.name}
           style={{ maxWidth: "150px", height: "auto" }}
-        />
+        />}
       </div>
       <div className={styles.name}>{menuItem.name}</div>
       </Link>
@@ -25,6 +25,5 @@ export default function MenuListItem({ menuItem, handleAddToOrder }) {
         </button>
       </div>
     </div>
-    
   );
 }
