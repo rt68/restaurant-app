@@ -271,7 +271,6 @@ const Item = require("../models/Item");
       price: 12.95,
     },
     {
-      img: "",
       name: "Chesapeake Roll",
       description: "Old Bay-Seasoned Lump Crab and Avocado ",
       category: categories[5],

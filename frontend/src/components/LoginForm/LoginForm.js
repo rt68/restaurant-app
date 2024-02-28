@@ -8,6 +8,7 @@ const LoginForm = ({ setUser }) => {
   });
 
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -16,12 +17,27 @@ const LoginForm = ({ setUser }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Check if the form is already being submitted
+    if (loading) {
+      return;
+    }
+
     try {
+      // Set loading state to true
+      setLoading(true);
+
       const user = await usersService.logIn(credentials);
-      console.log(user)
       setUser(user);
     } catch (error) {
-      setError("Login Failed - Try Again");
+      if (error.response && error.response.data && error.response.data.message) {
+        setError(`Login Failed: ${error.response.data.message}`);
+      } else {
+        setError("Login Failed - Try Again");
+      }
+    } finally {
+      // Reset loading state regardless of success or failure
+      setLoading(false);
     }
   };
 
@@ -45,7 +61,9 @@ const LoginForm = ({ setUser }) => {
             onChange={handleChange}
             required
           />
-          <button type="submit">LOG IN</button>
+          <button type="submit" disabled={loading}>
+            {loading ? "Logging in..." : "LOG IN"}
+          </button>
         </form>
       </div>
       <p className="error-message">&nbsp;{error}</p>
