@@ -1,5 +1,4 @@
 //imports
-
 import "./App.css";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
@@ -67,7 +66,7 @@ function App() {
               path="/menu/:categoryId/:itemId"
               element={<MenuItemDetail />}
             />
-            <Route path="/login" element={<Auth setuser={setUser} />} />
+            {/* <Route path="/users" element={<Auth setuser={setUser} />} /> */}
             <Route path="/orders" element={<OrderHistory />} />
             <Route
               path="/orders/new"
@@ -103,7 +102,7 @@ function App() {
               path="/menu/:categoryId/:itemId"
               element={<MenuItemDetail />}
             />
-            <Route path="/login" element={<Auth setuser={setUser} />} />
+            <Route path="/users" element={<Auth setuser={setUser} />} />
           </>
         )}
       </Routes>
