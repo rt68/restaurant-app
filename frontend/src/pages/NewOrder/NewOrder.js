@@ -64,18 +64,18 @@ export default function NewOrder({ user, setUser }) {
           cart={setCart}
           setActiveCat={setActiveCat}
         />
-        <Link to="/orders" className="button btn-sm">PREVIOUS ORDERS</Link>
-        <UserLogOut user={user} setUser={setUser} />
+        <Link to="/history" className="button btn-sm">PREVIOUS ORDERS</Link>
+        {/* <UserLogOut user={user} setUser={setUser} /> */}
       </aside>
       { menuItems.length > 0 && <MenuList
         menuItems={menuItems.filter(item => item.category.name === activeCat)}
         handleAddToOrder={handleAddToOrder}
-      />}
-      {cart.length > 0 && <OrderDetail
+      />
+      <OrderDetail
         order={cart}
         handleChangeQty={handleChangeQty}
         handleCheckout={handleCheckout}
-      />}
+      />
     </main>
   );
 }
