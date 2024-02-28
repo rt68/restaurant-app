@@ -53,6 +53,7 @@ const LoginForm = ({ setUser }) => {
             onChange={handleChange}
             required
           />
+          <br/>
           <label>Password</label>
           <input
             type="password"
@@ -61,6 +62,7 @@ const LoginForm = ({ setUser }) => {
             onChange={handleChange}
             required
           />
+          <br/>
           <button type="submit" disabled={loading}>
             {loading ? "Logging in..." : "LOG IN"}
           </button>
