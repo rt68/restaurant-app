@@ -14,6 +14,7 @@ export async function logIn(credentials) {
   const token = await usersAPI.login(credentials);
   // Persist the token to localStorage
   localStorage.setItem('token', token);
+  console.log('In users-service:', credentials);
   return getUser();
 }
 
