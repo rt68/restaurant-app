@@ -20,6 +20,11 @@ const userSchema = new Schema(
       minLength: 3,
       required: true,
     },
+    role: {
+      type: String,
+      enum: ['customer', 'owner', 'admin'], // Enum to restrict role to specific values
+      default: 'customer', // Default role if none is provided
+    },
   },
   {
     timestamps: true,
