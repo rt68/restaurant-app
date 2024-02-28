@@ -70,7 +70,7 @@ export default function NewOrder({ user, setUser }) {
       { menuItems.length > 0 && <MenuList
         menuItems={menuItems.filter(item => item.category.name === activeCat)}
         handleAddToOrder={handleAddToOrder}
-      />
+      />}
       <OrderDetail
         order={cart}
         handleChangeQty={handleChangeQty}
