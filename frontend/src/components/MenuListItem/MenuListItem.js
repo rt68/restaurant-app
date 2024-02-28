@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-concat */
 import styles from "./MenuListItem.module.css";
 import { Link } from "react-router-dom";
 export default function MenuListItem({ menuItem, handleAddToOrder }) {
