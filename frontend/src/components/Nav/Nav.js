@@ -8,6 +8,7 @@ export default function Nav({user,setUser}) {
         <nav>
             <Link to='/'>Ramen Time - 拉面时光</Link> &nbsp; | &nbsp;
 
+
             {user?(<>Hello {user.name}&nbsp; | &nbsp; <UserLogOut user={user} setUser={setUser} />
             <Link to="/orders/new">Menu</Link> &nbsp; | &nbsp;</>):(<> <Link to="/users">Sign Up/Log In</Link>
             &nbsp; | &nbsp;
@@ -18,6 +19,7 @@ export default function Nav({user,setUser}) {
             {/* <Link to="/login">Login</Link>  &nbsp; | &nbsp;
             <Link to="/signup">Sign Up</Link> */}
            
+
         </nav>
     )
 }

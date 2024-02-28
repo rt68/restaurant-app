@@ -1,4 +1,5 @@
 import styles from './CategoryList.module.css';
+import { Link } from 'react-router-dom';
 
 export default function CategoryList({ categories, activeCat, setActiveCat }) {
   const cats = categories.map(cat =>
@@ -9,7 +10,7 @@ export default function CategoryList({ categories, activeCat, setActiveCat }) {
       // className={cat === activeCat && 'active'}
       onClick={() => setActiveCat(cat)}
     >
-      {cat}
+      <Link to={`/menu/${cat}`} className={styles.link}>{cat}</Link>
     </li>
   );
   return (
