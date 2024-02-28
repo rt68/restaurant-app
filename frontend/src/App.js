@@ -13,6 +13,8 @@ import NewOrder from './pages/NewOrder/NewOrder';
 import Menu from './pages/NewOrder/Menu';
 import CategoryList from './components/CategoryList/CategoryList';
 import LineItem from './components/LineItem/LineItem';
+import MenuItemDetail from './pages/NewOrder/MenuItemDetails';
+import MenuList from './components/MenuList/MenuList';
 // import OrderHistory from './pages/OrderHistory/OrderHistory';
 
 function App() {
@@ -39,17 +41,33 @@ function App() {
      <Nav />
 
      <Routes>
-          <Route path="/" element={ <Landing />} />
-          {/* <Route path="/menu" element={<Menu />} /> */}
-          <Route path="/menu" element={<CategoryList  categories={categoriesRef.current} activeCat={activeCat} setActiveCat={setActiveCat}/>} /> 
-          <Route path="/menu/categories" element={<LineItem/>}></Route>
-          <Route path="/login" element={<Auth setuser={setUser}/>} />
-         {/* <Route path="/orders" element={<OrderHistory />} />
+        <Route path="/" element={<Landing />} />
+
+        {/* <Route path="/menu" element={<Menu />} /> */}
+        <Route path="/menu" element={<CategoryList  categories={categoriesRef.current} activeCat={activeCat} setActiveCat={setActiveCat}/>} /> 
+        <Route path="/menu/:categoryId" element={<MenuList menuItems={menuItems.filter(item=>item.category.name === activeCat)}/>}></Route>
+        <Route path="/menu/:categoryId/:itemId" element={<MenuItemDetail />} />
+        <Route path="/login" element={<Auth setuser={setUser} />} />
+        {/* <Route path="/orders" element={<OrderHistory />} />
+    
          <Route path="/*" element={<Navigate to="/orders/new" />} /> */}
        </Routes>
+
     
     </div>
   );
 }
 
 export default App;
+
+
+
+//<Routes>
+//<Route path="/" element={ <Landing />} />
+{/* <Route path="/menu" element={<Menu />} /> */}
+//<Route path="/menu" element={<CategoryList  categories={categoriesRef.current} activeCat={activeCat} setActiveCat={setActiveCat}/>} /> 
+//<Route path="/menu/categories" element={<LineItem/>}></Route>
+//<Route path="/login" element={<Auth setuser={setUser}/>} />
+{/* <Route path="/orders" element={<OrderHistory />} />
+<Route path="/*" element={<Navigate to="/orders/new" />} /> */}
+//</Routes>
