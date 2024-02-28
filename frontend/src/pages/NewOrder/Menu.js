@@ -1,6 +1,8 @@
 
 import { useState, useEffect } from 'react';
 import { getAll } from '../../utilities/items-api';
+import { Link } from "react-router-dom";
+
 
 function Menu() {
   // State to store the fetched items
@@ -24,12 +26,21 @@ function Menu() {
     <div>
       <h1>Menu</h1>
       <ul>
-        {items.map(item => (
-          <li key={item.id}>{item.name} - {item.price} {/* Adjust according to your item structure */}</li>
-        ))}
+      {items.map((item) => (
+          <li key={item._id}>
+            <Link to={`/menu/${item._id}`}>
+              {item.name} - {item.price}
+            </Link>
+          </li>
+      ))}
       </ul>
     </div>
   );
 }
 
 export default Menu;
+
+
+//{items.map(item => (
+ // <li key={item.id}>{item.name} - {item.price} {/* Adjust according to your item structure */}</li>
+//))}
