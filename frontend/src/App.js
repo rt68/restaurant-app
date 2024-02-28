@@ -21,22 +21,31 @@ function App() {
     <div className="App">
       <Nav  user={user} setUser={setUser} />
       <Routes>
+      <Route path="/" element={<Landing/>}/>
+      
         {user ? (
           // Authenticated routes
           <>
             <Route path="/orders/new" element={<NewOrder user={user} setUser={setUser} />} />
             <Route path="/orders" element={<OrderHistory user={user} setUser={setUser} />} />
             <Route path="/*" element={<Navigate to="/orders/new" />} />
-            <Route path="/menu" element={<Menu />} />
+            
+            {/* <Route path="/menu" element={<Menu />} /> */}
+            
           </>
         ) : (
           // Non-authenticated route
           <>
-            <Route path="/menu" element={<Menu />} />
-            <Route path="/" element={<Landing/>}/>
+           <Route path="/menu" element={<Menu />} />
+           <Route path="/users" element={<Auth setUser={setUser}/>} />
+            
           </>
 
         )}
+
+
+
+
       </Routes>
     </div>
   );
