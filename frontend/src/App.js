@@ -15,7 +15,7 @@ import CategoryList from './components/CategoryList/CategoryList';
 import LineItem from './components/LineItem/LineItem';
 import MenuItemDetail from './pages/NewOrder/MenuItemDetails';
 import MenuList from './components/MenuList/MenuList';
-// import OrderHistory from './pages/OrderHistory/OrderHistory';
+import OrderHistory from './pages/OrderHistory/OrderHistory';
 
 function App() {
   const [ user, setUser] = useState(getUser());
@@ -38,19 +38,31 @@ function App() {
 
   return (
     <div className="App">
-     <Nav />
-
-     <Routes>
+     <Nav  user={user} setUser={setUser} />
+    <Routes>
+      {user? (
+        <>
         <Route path="/" element={<Landing />} />
-
-        {/* <Route path="/menu" element={<Menu />} /> */}
         <Route path="/menu" element={<CategoryList  categories={categoriesRef.current} activeCat={activeCat} setActiveCat={setActiveCat}/>} /> 
-        <Route path="/menu/:categoryId" element={<MenuList menuItems={menuItems.filter(item=>item.category.name === activeCat)}/>}></Route>
+        <Route path="/menu/:categoryId" element={<MenuList menuItems={menuItems.filter(item=>item.category.name === activeCat)}/>}/>
         <Route path="/menu/:categoryId/:itemId" element={<MenuItemDetail />} />
         <Route path="/login" element={<Auth setuser={setUser} />} />
-        {/* <Route path="/orders" element={<OrderHistory />} />
-    
-         <Route path="/*" element={<Navigate to="/orders/new" />} /> */}
+       <Route path="/orders" element={<OrderHistory />} />
+       <Route path="/orders/new" element={<NewOrder user={user} setUser={setUser} />} />
+      </>
+      ):(
+                      <>
+                          <Route path="/" element={<Landing />} />
+
+              {/* <Route path="/menu" element={<Menu />} /> */}
+              <Route path="/menu" element={<CategoryList  categories={categoriesRef.current} activeCat={activeCat} setActiveCat={setActiveCat}/>} /> 
+              <Route path="/menu/:categoryId" element={<MenuList menuItems={menuItems.filter(item=>item.category.name === activeCat)}/>}></Route>
+              <Route path="/menu/:categoryId/:itemId" element={<MenuItemDetail />} />
+              <Route path="/login" element={<Auth setuser={setUser} />} />
+                      </>
+
+      )}
+
        </Routes>
 
     
