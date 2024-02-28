@@ -35,7 +35,7 @@ export default function Nav({ user, setUser }) {
         <>
           Hello, {user.name}!&nbsp; | &nbsp;{" "}
           <UserLogOut user={user} setUser={setUser} />
-          {/* <Link to="/orders/new">Menu</Link> &nbsp; | &nbsp; */}
+          <Link to="/orders/new">Menu</Link> &nbsp; | &nbsp;
         </>
       ) : (
         <>

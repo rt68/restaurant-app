@@ -8,7 +8,7 @@ export default function OrderDetail({
   handleCheckout,
 }) {
   if (!order) return null;
-
+console.log(order)
   const lineItems = order.lineItems.map((item) => (
     <LineItem
       lineItem={item}
