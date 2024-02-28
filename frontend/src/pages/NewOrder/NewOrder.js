@@ -5,14 +5,14 @@ import styles from './NewOrder.module.css';
 import { Link, useNavigate } from 'react-router-dom';
 // import Logo from '../../components/Logo/Logo';
 import MenuList from '../../components/MenuList/MenuList.js';
-// import CategoryList from '../../components/CategoryList/CategoryList';
-// import OrderDetail from '../../components/OrderDetail/OrderDetail';
+import CategoryList from '../../components/CategoryList/CategoryList';
+import OrderDetail from '../../components/OrderDetail/OrderDetail';
 import UserLogOut from '../../components/UserLogOut/UserLogOut';
 
 export default function NewOrder({ user, setUser }) {
   const [menuItems, setMenuItems] = useState([]);
   const [activeCat, setActiveCat] = useState('');
-  const [cart, setCart] = useState(null);
+  const [cart, setCart] = useState([]);
   const categoriesRef = useRef([]);
   const navigate = useNavigate();
 
@@ -20,9 +20,11 @@ export default function NewOrder({ user, setUser }) {
     async function getItems() {
       const items = await itemsAPI.getAll();
       categoriesRef.current = items.reduce((cats, item) => {
+        
         const cat = item.category.name;
-        return cats.includes(cat) ? cats : [...cats, cat];
+        return cats.includes(cat) ?  cats : [...cats, cat];
       }, []);
+      
       setMenuItems(items);
       setActiveCat(categoriesRef.current[0]);
     }
@@ -57,23 +59,23 @@ export default function NewOrder({ user, setUser }) {
     <main className={styles.NewOrder}>
       <aside>
         {/* <Logo /> */}
-        {/* <CategoryList
+        <CategoryList
           categories={categoriesRef.current}
           cart={setCart}
           setActiveCat={setActiveCat}
-        /> */}
+        />
         <Link to="/orders" className="button btn-sm">PREVIOUS ORDERS</Link>
         <UserLogOut user={user} setUser={setUser} />
       </aside>
-      <MenuList
+      { menuItems.length > 0 && <MenuList
         menuItems={menuItems.filter(item => item.category.name === activeCat)}
         handleAddToOrder={handleAddToOrder}
-      />
-      {/* <OrderDetail
+      />}
+      {cart.length > 0 && <OrderDetail
         order={cart}
         handleChangeQty={handleChangeQty}
         handleCheckout={handleCheckout}
-      /> */}
+      />}
     </main>
   );
 }

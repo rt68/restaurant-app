@@ -1,6 +1,7 @@
 import styles from "./MenuListItem.module.css";
 import { Link } from 'react-router-dom';
 export default function MenuListItem({ menuItem, handleAddToOrder }) {
+  console.log(menuItem.price)
   return (
     
     <div className={styles.MenuListItem}>
@@ -15,8 +16,9 @@ export default function MenuListItem({ menuItem, handleAddToOrder }) {
       <div className={styles.name}>{menuItem.name}</div>
       </Link>
       <div className={styles.buy}>
-        <span>${menuItem.price.toFixed(2)}</span>
         
+        <span>${menuItem.price.toFixed(2)}</span>
+
         <button
           className="btn-sm"
           onClick={() => handleAddToOrder(menuItem._id)}

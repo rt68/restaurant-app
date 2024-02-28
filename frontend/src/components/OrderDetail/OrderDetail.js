@@ -17,7 +17,7 @@ export default function OrderDetail({
       key={item._id}
     />
   ));
-
+    
   return (
     <div className={styles.OrderDetail}>
       <div className={styles.sectionHeading}>
@@ -50,7 +50,7 @@ export default function OrderDetail({
               )}
               <span>{order.totalQty}</span>
               <span className={styles.right}>
-                ${order.orderTotal.toFixed(2)}
+                {/* ${order.orderTotal.toFixed(2)} */}
               </span>
             </section>
           </>
