@@ -2,8 +2,7 @@ import Footer from "../../components/Footer/Footer";
 export default function Landing() {
   return (
     <main>
-    <h1>
-        <a href='/'>Ramen Time - 拉面时光</a>
+    <h1>Welcome to Ramen Time
     </h1>
       <h1>We take Ramen so SERIOUSLY</h1>
       <span>
