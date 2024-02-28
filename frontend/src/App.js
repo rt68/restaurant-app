@@ -39,45 +39,22 @@ function App() {
     <div className="App">
       <Nav user={user} setUser={setUser} />
       <Routes>
+        <Route path="/" element={<Landing />} />
         {user ? (
           <>
-            <Route path="/" element={<Landing />} />
-            <Route
-              path="/menu"
-              element={
-                <CategoryList
-                  categories={categoriesRef.current}
-                  activeCat={activeCat}
-                  setActiveCat={setActiveCat}
-                />
-              }
-            />
-            <Route
-              path="/menu/:categoryId"
-              element={
-                <MenuList
-                  menuItems={menuItems.filter(
-                    (item) => item.category.name === activeCat
-                  )}
-                />
-              }
-            />
-            <Route
-              path="/menu/:categoryId/:itemId"
-              element={<MenuItemDetail />}
-            />
-            {/* <Route path="/users" element={<Auth setuser={setUser} />} /> */}
-            <Route path="/orders" element={<OrderHistory />} />
             <Route
               path="/orders/new"
               element={<NewOrder user={user} setUser={setUser} />}
             />
+            <Route
+              path="/orders"
+              element={<OrderHistory user={user} setUser={setUser} />}
+            />
+            <Route path="/*" element={<Navigate to="/orders/new" />} />
           </>
         ) : (
           <>
             <Route path="/" element={<Landing />} />
-
-            {/* <Route path="/menu" element={<Menu />} /> */}
             <Route
               path="/menu"
               element={
@@ -102,7 +79,7 @@ function App() {
               path="/menu/:categoryId/:itemId"
               element={<MenuItemDetail />}
             />
-            <Route path="/users" element={<Auth setuser={setUser} />} />
+            <Route path="/users" element={<Auth setUser={setUser} />} />
           </>
         )}
       </Routes>
