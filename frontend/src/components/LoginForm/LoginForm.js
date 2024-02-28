@@ -45,7 +45,8 @@ const LoginForm = ({ setUser }) => {
     <div>
       <div className="form-container">
         <form autoComplete="off" onSubmit={handleSubmit}>
-          <label>Email</label>
+          <label >Email:</label>
+          <br/>
           <input
             type="email"
             name="email"
@@ -54,7 +55,8 @@ const LoginForm = ({ setUser }) => {
             required
           />
           <br/>
-          <label>Password</label>
+          <label>Password:</label>
+          <br/>
           <input
             type="password"
             name="password"
