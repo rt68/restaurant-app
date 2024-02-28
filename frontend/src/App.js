@@ -10,6 +10,7 @@ import Landing from "./pages/Landing/Landing";
 import Auth from "./pages/Auth/Auth";
 import NewOrder from "./pages/NewOrder/NewOrder";
 import CategoryMenu from "./pages/Menu/CategoryMenu"
+import MenuListItem from "./components/MenuListItem/MenuListItem";
 import Menu from "./pages/NewOrder/Menu";
 import CategoryList from "./components/CategoryList/CategoryList";
 import LineItem from "./components/LineItem/LineItem";
@@ -65,17 +66,17 @@ function App() {
             <Route
               path="/menu/:categoryId"
               element={
-                <MenuList
+                <MenuListItem
                   menuItems={menuItems.filter(
                     (item) => item.category.name === activeCat
-                  )}
+                  )} 
                 />
               }
             ></Route>
-            <Route
+            {/* <Route
               path="/menu/:categoryId/:itemId"
               element={<MenuItemDetail />}
-            />
+            /> */}
             <Route path="/users" element={<Auth setUser={setUser} />} />
           </>
         )}
