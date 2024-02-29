@@ -63,7 +63,7 @@ export default function NewOrder({ user, setUser }) {
           setActiveCat={setActiveCat}
         />
         <Link to="/orders" className="button btn-sm">PREVIOUS ORDERS</Link>
-        <UserLogOut user={user} setUser={setUser} />
+        {/* <UserLogOut user={user} setUser={setUser} /> */}
       </aside>
       <MenuList
         menuItems={menuItems.filter(item => item.category.name === activeCat)}

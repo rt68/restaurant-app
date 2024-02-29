@@ -27,6 +27,21 @@
     font-size: 1.3vw;
   }
   
-  .LineItem button {
-    margin: 0;
+  .LineItem .button {
+    padding: 1px 3px;
+    background-color: #94d3ae;
+    color: #fff;
+    border: 2px solid #94d3ae;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin: 0 30px;
+  }
+  .LineItem .button :hover{
+    background-color: #27ae60;
+  }
+  .LineItem .itemName {
+    font-size: 1.6vw;
+    
   }
