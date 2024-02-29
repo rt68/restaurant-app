@@ -27,7 +27,7 @@ export default function OrderDetail({
             ORDER <span className="smaller">{order.orderId}</span>
           </span>
         ) : (
-          <span>NEW ORDER</span>
+          <span>NEW ORDER </span>
         )}
         <span>{new Date(order.updatedAt).toLocaleDateString()}</span>
       </div>
@@ -49,6 +49,7 @@ export default function OrderDetail({
                   CHECKOUT
                 </button>
               )}
+              <br/>
               <span>{order.totalQty}</span>
               <span className={styles.right}>
                 ${order.orderTotal.toFixed(2)}
