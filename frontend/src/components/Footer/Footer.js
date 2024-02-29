@@ -2,15 +2,12 @@ export default function Footer() {
     const myStyle = {
       listStyle: "none",
       fontSize: "16px",
-      backgroundColor: "#F0F0F0",
-      padding: "10px",
-      border: "1px solid #ccc",
-      borderRadius: "5px",
     };
     return (
       <div>
-        <h2>Ramen Time</h2>
+        
         <ul style={myStyle}>
+        <h3>Ramen Time</h3>
           <li>Contact</li>
           <li>Tel: (757)-808-7277</li>
           <li>(757)-808-7164</li>

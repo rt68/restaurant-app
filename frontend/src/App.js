@@ -4,6 +4,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 import { getUser } from "./utilities/users-service";
 import * as itemsAPI from "./utilities/items-api";
+import Footer from "./components/Footer/Footer";
 //pages
 import Nav from "./components/Nav/Nav";
 import Landing from "./pages/Landing/Landing";
@@ -80,6 +81,7 @@ function App() {
           </>
         )}
       </Routes>
+      <Footer />
     </div>
   );
 }

@@ -1,0 +1,22 @@
+.div{
+    display:flex;
+    position:right;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: x-large;
+    font-weight: 500;
+    color: black;
+}
+
+
+.img{
+    width:100%;
+    height:auto;
+    align-self:flex-start;
+}
+
+.signup{
+    align-items: right;
+}

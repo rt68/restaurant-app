@@ -1,0 +1,15 @@
+.group {
+    /* font-family: 'Verdana light'; */
+    font-family:'Gill Sans MT';
+    padding: 10%;
+}
+
+.p { 
+    text-align: center;
+    line-height: 2;
+    padding-top: 5%;
+}
+
+.h2 {
+    text-align: center;
+}
