@@ -51,7 +51,7 @@ export default function OrderDetail({
               )}
               <span>{order.totalQty}</span>
               <span className={styles.right}>
-                {/* ${order.orderTotal.toFixed(2)} */}
+                ${order.orderTotal.toFixed(2)}
               </span>
             </section>
           </>

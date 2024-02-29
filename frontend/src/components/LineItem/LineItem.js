@@ -8,7 +8,7 @@ export default function LineItem({ lineItem, isPaid, handleChangeQty }) {
       {/* <div className="flex-ctr-ctr">{lineItem.item.img}</div> */}
       <div className="flex-ctr-ctr flex-col">
         <span className="align-ctr">{lineItem.item.name}</span>
-        <span>{lineItem.item.price}</span>
+        {/* <span>{lineItem.item.price}</span> */}
         {/* <span>{lineItem.item.price.toFixed(2)}</span> */}
       </div>
       <div
@@ -34,7 +34,7 @@ export default function LineItem({ lineItem, isPaid, handleChangeQty }) {
           </button>
         )}
       </div>
-      {/* <div className={styles.extPrice}>${lineItem.extPrice.toFixed(2)}</div> */}
+      <div className={styles.extPrice}>${lineItem.extPrice.toFixed(2)}</div>
     </div>
   );
 }
