@@ -11,11 +11,6 @@ import Auth from "./pages/Auth/Auth";
 import NewOrder from "./pages/NewOrder/NewOrder";
 import CategoryMenu from "./pages/Menu/CategoryMenu"
 import MenuListItem from "./components/MenuListItem/MenuListItem";
-import Menu from "./pages/NewOrder/Menu";
-import CategoryList from "./components/CategoryList/CategoryList";
-import LineItem from "./components/LineItem/LineItem";
-import MenuItemDetail from "./pages/NewOrder/MenuItemDetails";
-import MenuList from "./components/MenuList/MenuList";
 import OrderHistory from "./pages/OrderHistory/OrderHistory";
 
 function App() {
@@ -46,7 +41,7 @@ function App() {
           <>
 
             <Route path="/orders/new" element={<NewOrder user={user} setUser={setUser} />} />
-            <Route path="/history" element={<OrderHistory user={user} setUser={setUser} />} />
+            <Route path="/orders" element={<OrderHistory user={user} setUser={setUser} />} />
             <Route path="/*" element={<Navigate to="/orders/new" />} />
           </>
         ) : (

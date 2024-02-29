@@ -1,6 +1,6 @@
 import styles from "./MenuListItem.module.css";
 import { Link } from "react-router-dom";
-export default function MenuListItem({ menuItems, handleAddToOrder }) {
+export default function MenuListItem({ menuItems }) {
   const items = menuItems.map((item) => (
     <div>
       {item.img && (
@@ -15,8 +15,8 @@ export default function MenuListItem({ menuItems, handleAddToOrder }) {
       <h1>${item.price}</h1>
     </div>
   ));
-
-  return <main className={styles.MenuList}>{items}</main>;
+console.log(items);
+  return <main className={styles.MenuListItem}>{items}</main>;}
 
   // return (
 
@@ -43,4 +43,3 @@ export default function MenuListItem({ menuItems, handleAddToOrder }) {
   //     </div>
   //   </div>
   // );
-}

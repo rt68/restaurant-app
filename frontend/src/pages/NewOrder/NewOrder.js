@@ -3,11 +3,12 @@ import * as itemsAPI from '../../utilities/items-api';
 import * as ordersAPI from '../../utilities/orders-api';
 import styles from './NewOrder.module.css';
 import { Link, useNavigate } from 'react-router-dom';
-// import Logo from '../../components/Logo/Logo';
-import MenuList from '../../components/MenuList/MenuList.js';
+//components
+import MenuList from '../../components/MenuList/MenuList';
 import CategoryList from '../../components/CategoryList/CategoryList';
 import OrderDetail from '../../components/OrderDetail/OrderDetail';
 import UserLogOut from '../../components/UserLogOut/UserLogOut';
+import MenuListItem from '../../components/MenuListItem/MenuListItem';
 
 export default function NewOrder({ user, setUser }) {
   const [menuItems, setMenuItems] = useState([]);
@@ -56,19 +57,19 @@ export default function NewOrder({ user, setUser }) {
   return (
     <main className={styles.NewOrder}>
       <aside>
-        {/* <Logo /> */}
         <CategoryList
           categories={categoriesRef.current}
           cart={setCart}
           setActiveCat={setActiveCat}
         />
-        <Link to="/history" className="button btn-sm">PREVIOUS ORDERS</Link>
-        {/* <UserLogOut user={user} setUser={setUser} /> */}
+        <Link to="/orders" className="button btn-sm">PREVIOUS ORDERS</Link>
+        <UserLogOut user={user} setUser={setUser} />
       </aside>
       <MenuList
         menuItems={menuItems.filter(item => item.category.name === activeCat)}
         handleAddToOrder={handleAddToOrder}
       />
+     
       <OrderDetail
         order={cart}
         handleChangeQty={handleChangeQty}

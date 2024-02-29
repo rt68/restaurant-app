@@ -25,6 +25,7 @@
 
 import { Link } from "react-router-dom";
 import Auth from "../../pages/Auth/Auth";
+import styles from "./Nav.module.css"
 import UserLogOut from "../UserLogOut/UserLogOut";
 
 export default function Nav({ user, setUser }) {
