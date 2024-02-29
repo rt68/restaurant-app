@@ -1,5 +1,6 @@
-import styles from '../../components/CategoryList/CategoryList.module.css';
+// import styles from '../../components/CategoryList/CategoryList.module.css';
 import { Link } from 'react-router-dom';
+import styles from "./CategoryMenu.module.css"
 
 export default function Menu({ categories, activeCat, setActiveCat}) {
   const cats = categories.map(cat =>
@@ -15,7 +16,7 @@ export default function Menu({ categories, activeCat, setActiveCat}) {
     </li>
   );
   return (
-    <ul className={styles.CategoryList}>
+    <ul className={styles.CategoryMenu}>
       {cats}
     </ul>
   );

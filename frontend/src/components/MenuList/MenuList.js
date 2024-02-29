@@ -14,7 +14,7 @@
 
 
 import styles from "./MenuList.module.css";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 export default function MenuList({ menuItems, handleAddToOrder }) {
   const items = menuItems.map((item) => (
     <div>
@@ -36,4 +36,5 @@ export default function MenuList({ menuItems, handleAddToOrder }) {
     </div>
   ));
 
-  return <main className={styles.MenuList}>{items}</main>;}
+  return <main className={styles.MenuList}>{items}</main>;
+}

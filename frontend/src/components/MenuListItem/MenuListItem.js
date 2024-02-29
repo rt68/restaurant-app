@@ -1,36 +1,25 @@
 /* eslint-disable no-useless-concat */
 import styles from "./MenuListItem.module.css";
 import { Link } from "react-router-dom";
-export default function MenuListItem({ menuItem, handleAddToOrder }) {
-  return (
-    <div className={styles.MenuListItem}>
-      <Link to={`/menu/category/${menuItem._id}`} className="menu-item-link">
-        <div className={styles.img + " " + "flex-ctr-ctr"}>
-          {menuItem.img && (
-            <img
-              src={menuItem.img}
-              alt={menuItem.name}
-              style={{ maxWidth: "150px", height: "auto" }}
-            />
-          )}
-        </div>
-        <div className={styles.name}>{menuItem.name}</div>
-      </Link>
-      <div className={styles.buy}>
-        <span>${menuItem.price.toFixed(2)}</span>
 
-        <button
-          className="btn-sm"
-          onClick={() => handleAddToOrder(menuItem._id)}
-        >
-          ADD
-        </button>
-      </div>
+export default function MenuListItem({ menuItems }) {
+  const items = menuItems.map((item) => (
+    <div>
+      {item.img && (
+        <img
+          src={item.img}
+          alt={item.name}
+          style={{ maxWidth: "150px", height: "auto" }}
+        />
+      )}
+      <h1>{item.name}</h1>
+      <p>{item.description}</p>
+      <h1>${item.price}</h1>
     </div>
-  );
-}
+  ));
+console.log(items);
+  return <main className={styles.MenuListItem}>{items}</main>;}
 
-// return <main className={styles.MenuList}>{items}</main>;
 
 // return (
 
@@ -48,13 +37,14 @@ export default function MenuListItem({ menuItem, handleAddToOrder }) {
 //     <div className={styles.buy}>
 //       <span>${menuItems.price.toFixed(2)}</span>
 
-//       <button
-//         className="btn-sm"
-//         onClick={() => handleAddToOrder(menuItems._id)}
-//       >
-//         ADD
-//       </button>
-//     </div>
-//   </div>
-// );
-// }
+
+  //       <button
+  //         className="btn-sm"
+  //         onClick={() => handleAddToOrder(menuItems._id)}
+  //       >
+  //         ADD
+  //       </button>
+  //     </div>
+  //   </div>
+  // );
+

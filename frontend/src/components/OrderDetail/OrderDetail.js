@@ -8,7 +8,7 @@ export default function OrderDetail({
   handleCheckout,
 }) {
   if (!order) return null;
-
+// console.log(order);
   const lineItems = order.lineItems.map((item) => (
     <LineItem
       lineItem={item}
@@ -17,6 +17,7 @@ export default function OrderDetail({
       key={item._id}
     />
   ));
+
 
   return (
     <div className={styles.OrderDetail}>
@@ -50,7 +51,7 @@ export default function OrderDetail({
               )}
               <span>{order.totalQty}</span>
               <span className={styles.right}>
-                {/* ${order.orderTotal.toFixed(2)} */}
+                ${order.orderTotal.toFixed(2)}
               </span>
             </section>
           </>
