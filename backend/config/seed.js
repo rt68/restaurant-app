@@ -463,4 +463,5 @@ const Item = require("../models/Item");
   console.log(items);
 
   process.exit();
+  
 })();
