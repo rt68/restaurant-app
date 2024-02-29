@@ -1,12 +1,15 @@
 import styles from "./LineItem.module.css";
 
 export default function LineItem({ lineItem, isPaid, handleChangeQty }) {
+ 
+  console.log(lineItem);
   return (
     <div className={styles.LineItem}>
-      <div className="flex-ctr-ctr">{lineItem.item.img}</div>
+      {/* <div className="flex-ctr-ctr">{lineItem.item.img}</div> */}
       <div className="flex-ctr-ctr flex-col">
         <span className="align-ctr">{lineItem.item.name}</span>
-        <span>{lineItem.item.price.toFixed(2)}</span>
+        {/* <span>{lineItem.item.price}</span> */}
+        {/* <span>{lineItem.item.price.toFixed(2)}</span> */}
       </div>
       <div
         className={styles.qty}
@@ -15,7 +18,8 @@ export default function LineItem({ lineItem, isPaid, handleChangeQty }) {
         {!isPaid && (
           <button
             className="btn-xs"
-            onClick={() => handleChangeQty(lineItem.item._id, lineItem.qty - 1)}
+            onClick={() => handleChangeQty( lineItem.item._id, lineItem.qty - 1)
+            }
           >
             −
           </button>
@@ -24,7 +28,7 @@ export default function LineItem({ lineItem, isPaid, handleChangeQty }) {
         {!isPaid && (
           <button
             className="btn-xs"
-            onClick={() => handleChangeQty(lineItem.item._id, lineItem.qty + 1)}
+            onClick={() => handleChangeQty( lineItem.item._id, lineItem.qty + 1)}
           >
             +
           </button>
