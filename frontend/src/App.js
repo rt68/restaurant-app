@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 //imports
 import "./App.css";
 import { Routes, Route, Navigate } from "react-router-dom";
@@ -9,8 +10,6 @@ import Nav from "./components/Nav/Nav";
 import Landing from "./pages/Landing/Landing";
 import Auth from "./pages/Auth/Auth";
 import NewOrder from "./pages/NewOrder/NewOrder";
-import CategoryMenu from "./pages/Menu/CategoryMenu"
-import MenuListItem from "./components/MenuListItem/MenuListItem";
 import Menu from "./pages/NewOrder/Menu";
 import CategoryList from "./components/CategoryList/CategoryList";
 import LineItem from "./components/LineItem/LineItem";
@@ -41,42 +40,36 @@ function App() {
     <div className="App">
       <Nav user={user} setUser={setUser} />
       <Routes>
-      <Route path="/" element={<Landing />} />
-        {user ? (
-          <>
+        <Route path="/" element={<Landing />} />
 
-            <Route path="/orders/new" element={<NewOrder user={user} setUser={setUser} />} />
-            <Route path="/history" element={<OrderHistory user={user} setUser={setUser} />} />
-            <Route path="/*" element={<Navigate to="/orders/new" />} />
-          </>
-        ) : (
+        {user ? (
+          // Authenticated routes
           <>
-            <Route path="/" element={<Landing />} />
             <Route
-              path="/menu"
-              element={
-                <CategoryMenu
-                  user={user}
-                  categories={categoriesRef.current}
-                  activeCat={activeCat}
-                  setActiveCat={setActiveCat}
-                />
-              }
+              path="/orders/new"
+              element={<NewOrder user={user} setUser={setUser} />}
             />
             <Route
-              path="/menu/:categoryId"
-              element={
-                <MenuListItem
-                  menuItems={menuItems.filter(
-                    (item) => item.category.name === activeCat
-                  )} 
-                />
-              }
-            ></Route>
-            {/* <Route
-              path="/menu/:categoryId/:itemId"
-              element={<MenuItemDetail />}
-            /> */}
+              path="/orders"
+              element={<OrderHistory user={user} setUser={setUser} />}
+            />
+
+            <Route
+              path="/orders/new"
+              element={<NewOrder user={user} setUser={setUser} />}
+            />
+            <Route
+              path="/history"
+              element={<OrderHistory user={user} setUser={setUser} />}
+            />
+            <Route path="/*" element={<Navigate to="/orders/new" />} />
+
+            {/* <Route path="/menu" element={<Menu />} /> */}
+          </>
+        ) : (
+          // Non-authenticated route
+          <>
+            <Route path="/menu" element={<Menu />} />
             <Route path="/users" element={<Auth setUser={setUser} />} />
           </>
         )}
