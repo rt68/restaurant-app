@@ -1,6 +1,8 @@
+//routes/api/adminRoutes.js
+
 const express = require('express');
 const router = express.Router();
-const { checkRole } = require('../../config/checkRole'); 
+const  checkRole  = require('../../config/checkRole'); 
 const adminController = require('../../controllers/api/admin'); 
 
 // Route to get all users (admin only)

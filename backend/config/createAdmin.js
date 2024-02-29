@@ -1,17 +1,8 @@
+//config/createAdmin.js
+
 require("dotenv").config();
 mongoose = require("./database");
 const User = require('../models/User')
-// const bcrypt = require('bcrypt');
-
-// const createAdmin = async () => {
-//     const hashedPassword = await bcrypt.hash('1234', 6); 
-  
-//     const adminUser = new User({
-//       name: 'Admin User',
-//       email: 'admin@example.com',
-//       password: hashedPassword,
-//       role: 'admin',
-//     });
   
 const createAdmin = async () => {
     

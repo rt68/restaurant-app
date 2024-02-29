@@ -6,6 +6,7 @@ const path = require('path');
 // const favicon = require('serve-favicon');
 const logger = require('morgan');
 const ensureLoggedIn = require('./config/ensureLoggedIn');
+// const checkRole = require('./config/checkRole')
 
 const app = express();
 
@@ -32,6 +33,8 @@ app.use("/api/users", require('./routes/api/users'))
 app.use('/api/items', require('./routes/api/items'));
 
 app.use('/api/orders',  require('./routes/api/orders'));
+//Admin routes
+app.use('/api/admin', require('./routes/api/adminRoutes'));
 
 // The following "catch all" route (note the *) is necessary
 // to return the index.html on all non-AJAX requests

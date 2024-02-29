@@ -33,8 +33,13 @@ export default function Nav({ user, setUser }) {
       <Link to="/">Ramen Time - 拉面时光</Link> &nbsp; | &nbsp;
       {user ? (
         <>
-          Hello, {user.name}!&nbsp; | &nbsp;
+          <span>Hello, {user.name}!</span>&nbsp; | &nbsp;
           <Link to="/orders/new">Order</Link> &nbsp; | &nbsp;
+          {user.role === 'admin' && (
+            <>
+              <Link to="/admin">Admin Dashboard</Link> &nbsp; | &nbsp;
+            </>
+          )}
           <UserLogOut user={user} setUser={setUser} />
           
         </>

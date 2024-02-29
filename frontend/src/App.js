@@ -9,7 +9,7 @@ import Nav from "./components/Nav/Nav";
 import Landing from "./pages/Landing/Landing";
 import Auth from "./pages/Auth/Auth";
 import NewOrder from "./pages/NewOrder/NewOrder";
-import CategoryMenu from "./pages/Menu/CategoryMenu"
+import CategoryMenu from "./pages/Menu/CategoryMenu";
 import MenuListItem from "./components/MenuListItem/MenuListItem";
 import Menu from "./pages/NewOrder/Menu";
 import CategoryList from "./components/CategoryList/CategoryList";
@@ -17,7 +17,7 @@ import LineItem from "./components/LineItem/LineItem";
 import MenuItemDetail from "./pages/NewOrder/MenuItemDetails";
 import MenuList from "./components/MenuList/MenuList";
 import OrderHistory from "./pages/OrderHistory/OrderHistory";
-
+import AdminDash from "./pages/AdminDash/AdminDash";
 function App() {
   const [user, setUser] = useState(getUser());
   const [activeCat, setActiveCat] = useState("");
@@ -36,50 +36,53 @@ function App() {
     }
     getItems();
   }, []);
+  
+
 
   return (
     <div className="App">
       <Nav user={user} setUser={setUser} />
       <Routes>
-      <Route path="/" element={<Landing />} />
+        <Route path="/" element={<Landing />} />
+        <Route path="/users" element={<Auth setUser={setUser} />} />
         {user ? (
           <>
-
+           {user.role === 'admin' && <Route path="/admin" element={<AdminDash />} />}
             <Route path="/orders/new" element={<NewOrder user={user} setUser={setUser} />} />
             <Route path="/history" element={<OrderHistory user={user} setUser={setUser} />} />
-            <Route path="/*" element={<Navigate to="/orders/new" />} />
+                   
           </>
-        ) : (
-          <>
-            <Route path="/" element={<Landing />} />
-            <Route
-              path="/menu"
-              element={
-                <CategoryMenu
-                  user={user}
-                  categories={categoriesRef.current}
-                  activeCat={activeCat}
-                  setActiveCat={setActiveCat}
-                />
-              }
+        ):( <>
+                <Route
+          path="/menu"
+          element={
+            <CategoryMenu
+              user={user}
+              categories={categoriesRef.current}
+              activeCat={activeCat}
+              setActiveCat={setActiveCat}
             />
-            <Route
-              path="/menu/:categoryId"
-              element={
-                <MenuListItem
-                  menuItems={menuItems.filter(
-                    (item) => item.category.name === activeCat
-                  )} 
-                />
-              }
-            ></Route>
-            {/* <Route
+          }
+        />
+        <Route
+          path="/menu/:categoryId"
+          element={
+            <MenuListItem
+              menuItems={menuItems.filter(
+                (item) => item.category.name === activeCat
+              )}
+            />
+          }
+        />
+       </> )}
+       
+        
+
+        {/* <Route
               path="/menu/:categoryId/:itemId"
               element={<MenuItemDetail />}
             /> */}
-            <Route path="/users" element={<Auth setUser={setUser} />} />
-          </>
-        )}
+        
       </Routes>
     </div>
   );
