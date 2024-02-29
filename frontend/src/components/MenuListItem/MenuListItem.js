@@ -1,8 +1,8 @@
 import styles from "./MenuListItem.module.css";
 import { Link } from "react-router-dom";
 export default function MenuListItem({ menuItems }) {
-  const items = menuItems.map((item) => (
-    <div>
+  const items = menuItems.map((item, _id) => (
+    <div key={_id}>
       {item.img && (
         <img
           src={item.img}
@@ -17,29 +17,3 @@ export default function MenuListItem({ menuItems }) {
   ));
 console.log(items);
   return <main className={styles.MenuListItem}>{items}</main>;}
-
-  // return (
-
-  //   <div className={styles.MenuListItem}>
-  //     <Link to={`/menu/category/${menuItems._id}`} className="menu-item-link">
-  //     <div className={styles.img + " " + "flex-ctr-ctr"}>
-  //       {menuItems.img && <img
-  //         src={menuItems.img}
-  //         alt={menuItems.name}
-  //         style={{ maxWidth: "150px", height: "auto" }}
-  //       />}
-  //     </div>
-  //     <div className={styles.name}>{menuItems.name}</div>
-  //     </Link>
-  //     <div className={styles.buy}>
-  //       <span>${menuItems.price.toFixed(2)}</span>
-
-  //       <button
-  //         className="btn-sm"
-  //         onClick={() => handleAddToOrder(menuItems._id)}
-  //       >
-  //         ADD
-  //       </button>
-  //     </div>
-  //   </div>
-  // );
