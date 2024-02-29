@@ -37,12 +37,12 @@ function App() {
       <Nav user={user} setUser={setUser} />
       <Routes>
       <Route path="/" element={<Landing />} />
-        {user? (
+        {user ? (
           <>
 
             <Route path="/orders/new" element={<NewOrder user={user} setUser={setUser} />} />
             <Route path="/orders" element={<OrderHistory user={user} setUser={setUser} />} />
-            {/* <Route path="/*" element={<Navigate to="/orders/new" />} /> */}
+            <Route path="/*" element={<Navigate to="/orders/new" />} />
           </>
         ) : (
           <>
