@@ -55,6 +55,7 @@ For inquiries or further information, please contact us at BAM JR Development â€
 HTML | CSS | JavaScript | MongoDB | Express | React | Node.| Mongoose | Bcrypt | JSON Webtoken | 
 ## Getting Started
 Click here to launch the app: 
+
 In Ramen Time, you can sign up or login as a new user. You can also login or sign up as an administrator for the restaurant. Use the navigation bar to see the home page, the about page, and the menu with all of our food category options. Scroll through each category to see each food time. Sign up or login to start your new order. Add the meals of your choice to your order and select the quantity of each meal. Checkout your order and wait for your food! Administrators can navigate to their own dashboard with their a selection of action items. You can logout when you are finished.
 ## Trello Board, ERD Dataflow and Schema Diagrams
  
