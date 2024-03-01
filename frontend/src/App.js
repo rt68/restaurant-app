@@ -1,4 +1,3 @@
-//imports
 import "./App.css";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
@@ -81,64 +80,3 @@ function App() {
 
 export default App;
 
-//These changes are before admin added
-      {/* <Routes>
-      <Route path="/" element={<Landing />} />
-        {user ? (
-          <>
-
-            <Route path="/orders/new" element={<NewOrder user={user} setUser={setUser} />} />
-            <Route path="/orders" element={<OrderHistory user={user} setUser={setUser} />} />
-            <Route path="/*" element={<Navigate to="/orders/new" />} />
-          </>
-        ) : (
-          <>
-            <Route path="/" element={<Landing />} />
-            <Route
-              path="/menu"
-              element={
-                <CategoryMenu
-                  user={user}
-                  categories={categoriesRef.current}
-                  activeCat={activeCat}
-                  setActiveCat={setActiveCat}
-                />
-              }
-            />
-            <Route
-              path="/menu/:categoryId"
-              element={
-                <MenuListItem
-                  menuItems={menuItems.filter(
-                    (item) => item.category.name === activeCat
-                  )} 
-                />
-              }
-            ></Route>
-            <Route path="/users" element={<Auth setUser={setUser} />} />
-          </>
-        )}
-      </Routes> */}
-  
-
-
-
-
-
-      // {
-      //   user? ((user.role === "admin")?(<Route path="/admin" element={<AdminDash/>}/>):(
-      //     <>
-      //     <Route path="/" element={<Landing />} />
-      //     <Route path="/orders/new" element={<NewOrder user={user} setUser={setUser} />} />
-      //     <Route path="/orders" element={<OrderHistory user={user} setUser={setUser} />} />
-      //     <Route path="/*" element={<Navigate to="/orders/new" />} />
-      //     </>
-      //   ) ): (
-      //     <>
-      //       <Route path="/" element={<Landing />} />
-      //       <Route path="/menu" element={<CategoryMenu user={user} categories={categoriesRef.current} activeCat={activeCat} setActiveCat={setActiveCat} />} />
-      //       <Route path="/menu/:categoryId" element={<MenuListItem menuItems={menuItems.filter((item) => item.category.name === activeCat)} />} />
-      //       <Route path="/users" element={<Auth setUser={setUser} />} />
-      //     </>
-      //   )
-      // }
