@@ -1,4 +1,4 @@
-import Footer from "../../components/Footer/Footer";
+
 export default function Landing() {
   return (
     <main>
@@ -20,7 +20,7 @@ export default function Landing() {
         in the cold Hokkaido area in the north while tonkotsu is particularly
         popular in Kyushu.
       </span>
-      <Footer />
+     
     </main>
   );
 }
