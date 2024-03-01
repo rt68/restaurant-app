@@ -11,7 +11,7 @@ return (
   <div className={styles.UserLogOut}>
     {/* <div>{user.name}</div>
     <div className={styles.email}>{user.email}</div> */}
-    <button className="btn-sm" onClick={handleLogOut}>LOG OUT</button>
+    <button className={styles.button} onClick={handleLogOut}>Log Out</button>
   </div>
 );
 }

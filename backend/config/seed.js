@@ -81,7 +81,12 @@ const Item = require("../models/Item");
       price: 18.49,
     },
 
-    { img: "https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047093/Ramen%20Time%20Images/EDAMAME_cxfjxl.png",name: "Edamame", category: categories[1], price: 5.99 },
+    {
+      img: "https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047093/Ramen%20Time%20Images/EDAMAME_cxfjxl.png",
+      name: "Edamame",
+      category: categories[1],
+      price: 5.99,
+    },
     {
       img: "https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047091/Ramen%20Time%20Images/DUMPLING_uhcmnq.png",
       name: "Dumpling (6pcs)",
@@ -89,30 +94,96 @@ const Item = require("../models/Item");
       category: categories[1],
       price: 5.99,
     },
-    { img:"https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047105/Ramen%20Time%20Images/STEAMED-PORK-BAO-BUN_wtmkl4.png", name: "Steamed Pork Bao Bun", category: categories[1], price: 3.99 },
-    { img: "https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047097/Ramen%20Time%20Images/FRIED-PURPLE-POTATO_giachn.png", name: "Fried Purple Potato", category: categories[1], price: 4.99 },
-    { ing: "https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047105/Ramen%20Time%20Images/SPRING-ROLLS_tcybic.png", name: "Spring Rolls (3pcs)", category: categories[1], price: 4.99 },
-    {img:"https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047101/Ramen%20Time%20Images/SCALLION-PANCAKE_imnpdx.png", name: "Scallion Pancake", category: categories[1], price: 4.99 },
-    { img: "https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047090/Ramen%20Time%20Images/AGED-TOFU_kk9ext.png", name: "Aged Tofu", category: categories[1], price: 5.99 },
-    {img: "https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047104/Ramen%20Time%20Images/STEAMED-CHASIU-BAO_rwicbs.png", name: "Steamed Chasiu Bao", category: categories[1], price: 6.99 },
-    { img: "https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047091/Ramen%20Time%20Images/CRAB-RANGOON_m6arul.png", name: "Crab Rangoon (6pcs)", category: categories[1], price: 6.49 },
-    { img: "https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047107/Ramen%20Time%20Images/TEMPURA-SHRIMP_zkhnf6.png",name: "Tempura Shrimp (5pcs)", category: categories[1], price: 8.49 },
-    { img: "https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047091/Ramen%20Time%20Images/CHICKEN-KARAAGE_mjzuep.png",name: "Chicken Karaage", category: categories[1], price: 7.99 },
-    { img: "https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047100/Ramen%20Time%20Images/OKONOMIYAKI_wxljee.png",name: "Okonomiyaki", category: categories[1], price: 7.99 },
-    {img: "https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047097/Ramen%20Time%20Images/FRIED-CHICKEN-WINGS_jcvt54.png",
+    {
+      img: "https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047105/Ramen%20Time%20Images/STEAMED-PORK-BAO-BUN_wtmkl4.png",
+      name: "Steamed Pork Bao Bun",
+      category: categories[1],
+      price: 3.99,
+    },
+    {
+      img: "https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047097/Ramen%20Time%20Images/FRIED-PURPLE-POTATO_giachn.png",
+      name: "Fried Purple Potato",
+      category: categories[1],
+      price: 4.99,
+    },
+    {
+      ing: "https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047105/Ramen%20Time%20Images/SPRING-ROLLS_tcybic.png",
+      name: "Spring Rolls (3pcs)",
+      category: categories[1],
+      price: 4.99,
+    },
+    {
+      img: "https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047101/Ramen%20Time%20Images/SCALLION-PANCAKE_imnpdx.png",
+      name: "Scallion Pancake",
+      category: categories[1],
+      price: 4.99,
+    },
+    {
+      img: "https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047090/Ramen%20Time%20Images/AGED-TOFU_kk9ext.png",
+      name: "Aged Tofu",
+      category: categories[1],
+      price: 5.99,
+    },
+    {
+      img: "https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047104/Ramen%20Time%20Images/STEAMED-CHASIU-BAO_rwicbs.png",
+      name: "Steamed Chasiu Bao",
+      category: categories[1],
+      price: 6.99,
+    },
+    {
+      img: "https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047091/Ramen%20Time%20Images/CRAB-RANGOON_m6arul.png",
+      name: "Crab Rangoon (6pcs)",
+      category: categories[1],
+      price: 6.49,
+    },
+    {
+      img: "https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047107/Ramen%20Time%20Images/TEMPURA-SHRIMP_zkhnf6.png",
+      name: "Tempura Shrimp (5pcs)",
+      category: categories[1],
+      price: 8.49,
+    },
+    {
+      img: "https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047091/Ramen%20Time%20Images/CHICKEN-KARAAGE_mjzuep.png",
+      name: "Chicken Karaage",
+      category: categories[1],
+      price: 7.99,
+    },
+    {
+      img: "https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047100/Ramen%20Time%20Images/OKONOMIYAKI_wxljee.png",
+      name: "Okonomiyaki",
+      category: categories[1],
+      price: 7.99,
+    },
+    {
+      img: "https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047097/Ramen%20Time%20Images/FRIED-CHICKEN-WINGS_jcvt54.png",
       name: "Fried Chicken Wings (6pcs)",
       category: categories[1],
       price: 8.49,
     },
-    { img:"https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047107/Ramen%20Time%20Images/TAKOYAKI_bykvbh.png", name: "Takoyaki", category: categories[1], price: 7.99 },
-    { img:"https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047096/Ramen%20Time%20Images/FRIED-OYSTER_ovccw2.png", name: "Fried Oyster", category: categories[1], price: 9.99 },
-    { img:"https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047097/Ramen%20Time%20Images/FRIED-SQUID_sd7tqy.png", name: "Fried Squid", category: categories[1], price: 9.99 },
+    {
+      img: "https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047107/Ramen%20Time%20Images/TAKOYAKI_bykvbh.png",
+      name: "Takoyaki",
+      category: categories[1],
+      price: 7.99,
+    },
+    {
+      img: "https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047096/Ramen%20Time%20Images/FRIED-OYSTER_ovccw2.png",
+      name: "Fried Oyster",
+      category: categories[1],
+      price: 9.99,
+    },
+    {
+      img: "https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047097/Ramen%20Time%20Images/FRIED-SQUID_sd7tqy.png",
+      name: "Fried Squid",
+      category: categories[1],
+      price: 9.99,
+    },
 
-    {  name: "Egg Fried Rice", category: categories[2], price: 9.99 },
+    { name: "Egg Fried Rice", category: categories[2], price: 9.99 },
     { name: "Shrimp Fried Rice", category: categories[2], price: 15.49 },
-    {name: "Seafood Fried Rice", category: categories[2], price: 18.49 },
-    {name: "Pork Katsu Over Rice", category: categories[2], price: 15.49 },
-    {name: "Braised Pork Over Rice", category: categories[2], price: 13.49 },
+    { name: "Seafood Fried Rice", category: categories[2], price: 18.49 },
+    { name: "Pork Katsu Over Rice", category: categories[2], price: 15.49 },
+    { name: "Braised Pork Over Rice", category: categories[2], price: 13.49 },
     {
       name: "Curry Fried Mei Fun",
       description: "Chicken/Shrimp/Cha Shu",
@@ -132,20 +203,20 @@ const Item = require("../models/Item");
       price: 12.99,
     },
     {
-     name: "Stir Fried Udon Noodle",
+      name: "Stir Fried Udon Noodle",
       description: "Chicken/Shrimp/Cha Shu",
       category: categories[2],
       price: 13.99,
     },
 
-    {  name: "Kani Salad", category: categories[3], price: 6.95 },
-    {name: "Seaweed Salad", category: categories[3], price: 6.25 },
+    { name: "Kani Salad", category: categories[3], price: 6.95 },
+    { name: "Seaweed Salad", category: categories[3], price: 6.25 },
 
     { name: "Salmon(2pc)", category: categories[4], price: 5.5 },
-    {name: "Tuna(2pc)", category: categories[4], price: 5.5 },
-    {name: "Yellowtail(2pc)", category: categories[4], price: 5.5 },
+    { name: "Tuna(2pc)", category: categories[4], price: 5.5 },
+    { name: "Yellowtail(2pc)", category: categories[4], price: 5.5 },
     { name: "Eel(2pc)", category: categories[4], price: 5.95 },
-    {name: "Crabstick(2pc)", category: categories[4], price: 4.25 },
+    { name: "Crabstick(2pc)", category: categories[4], price: 4.25 },
     {
       name: "Bruce Roll",
       description:
@@ -160,14 +231,14 @@ const Item = require("../models/Item");
       price: 12.95,
     },
     {
-       name: "Big Boss Roll",
+      name: "Big Boss Roll",
       description:
         "Lump Crab Meat, Shrimp Tempura inside, Eel, Avocado on top, Eel sauce and sesame",
       category: categories[5],
       price: 17.95,
     },
     {
-     name: "Tuna Bonfire Roll",
+      name: "Tuna Bonfire Roll",
       description: " Spicy Tuna & Jalapeno inside, Topped with Tuna & Avocado",
       category: categories[5],
       price: 12.95,
@@ -194,13 +265,14 @@ const Item = require("../models/Item");
       price: 13.95,
     },
     {
-     name: "Old Town Roll",
+      name: "Old Town Roll",
       description:
         "Shrimp Tempura Avocado Inside. Creamy Spicy Crab Meat and crunchy on top W Eel Sauce. Spicy Mayo",
       category: categories[5],
       price: 12.95,
     },
-    {img:"",  
+    {
+      img: "",
       name: "Chesapeake Roll",
       description: "Old Bay-Seasoned Lump Crab and Avocado ",
       category: categories[5],
@@ -339,17 +411,57 @@ const Item = require("../models/Item");
     { name: "Ramunee(Strawberry)", category: categories[7], price: 3.75 },
     { name: "Ramunee(Original)", category: categories[7], price: 3.75 },
 
-    { img:"https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047094/Ramen%20Time%20Images/EXTRA-NOODLE_dflbfr.png",  name: "Extra Noodle", category: categories[8], price: 2.5 },
-    { img:"https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047092/Ramen%20Time%20Images/EXTRA-CHASHU-PORK_nldjn7.png",  name: "Chashu Pork (2 slices)", category: categories[8], price: 2.5 },
-    { img:"https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047092/Ramen%20Time%20Images/EXTRA-BIG-SHRIMP_vb5tua.png",  name: "Big Shrimp (2 slices)", category: categories[8], price: 3.5 },
-    { img:"https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047093/Ramen%20Time%20Images/EXTRA-CORN_zciibz.png",  name: "Corn", category: categories[8], price: 2.0 },
-    { img:"https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047092/Ramen%20Time%20Images/EXTRA-BAMBOO-SHOOT_tdkjqo.png",  name: "Bamboo Shoot", category: categories[8], price: 2.0 },
-    { img:"https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047093/Ramen%20Time%20Images/EXTRA-EGG_pajpms.png",  name: "Egg", category: categories[8], price: 1.0 },
-    { img:"https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047094/Ramen%20Time%20Images/EXTRA-WOOD-EAR_cygfat.png",  name: "Wood Ear", category: categories[8], price: 2.0 },
-    { img:"https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047093/Ramen%20Time%20Images/EXTRA-KIMCHI_edag7x.png",  name: "Kimchi", category: categories[8], price: 2.5 },
+    {
+      img: "https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047094/Ramen%20Time%20Images/EXTRA-NOODLE_dflbfr.png",
+      name: "Extra Noodle",
+      category: categories[8],
+      price: 2.5,
+    },
+    {
+      img: "https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047092/Ramen%20Time%20Images/EXTRA-CHASHU-PORK_nldjn7.png",
+      name: "Chashu Pork (2 slices)",
+      category: categories[8],
+      price: 2.5,
+    },
+    {
+      img: "https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047092/Ramen%20Time%20Images/EXTRA-BIG-SHRIMP_vb5tua.png",
+      name: "Big Shrimp (2 slices)",
+      category: categories[8],
+      price: 3.5,
+    },
+    {
+      img: "https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047093/Ramen%20Time%20Images/EXTRA-CORN_zciibz.png",
+      name: "Corn",
+      category: categories[8],
+      price: 2.0,
+    },
+    {
+      img: "https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047092/Ramen%20Time%20Images/EXTRA-BAMBOO-SHOOT_tdkjqo.png",
+      name: "Bamboo Shoot",
+      category: categories[8],
+      price: 2.0,
+    },
+    {
+      img: "https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047093/Ramen%20Time%20Images/EXTRA-EGG_pajpms.png",
+      name: "Egg",
+      category: categories[8],
+      price: 1.0,
+    },
+    {
+      img: "https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047094/Ramen%20Time%20Images/EXTRA-WOOD-EAR_cygfat.png",
+      name: "Wood Ear",
+      category: categories[8],
+      price: 2.0,
+    },
+    {
+      img: "https://res.cloudinary.com/dxh60x8dq/image/upload/v1709047093/Ramen%20Time%20Images/EXTRA-KIMCHI_edag7x.png",
+      name: "Kimchi",
+      category: categories[8],
+      price: 2.5,
+    },
   ]);
 
   console.log(items);
 
   process.exit();
-
+})()
