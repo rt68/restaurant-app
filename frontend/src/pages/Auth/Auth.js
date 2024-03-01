@@ -8,8 +8,8 @@ export default function Auth({ setUser }) {
 
   return (
     <div>
-      <div className={styles.container}>
-        <div className={styles.content}>
+      <div className={styles.container} style={{ marginTop: "0px" }}>
+        <div className={styles.content} style={{ marginTop: "50px" }}>
           <div className={styles.login}>
             <div className={styles.header}>
               <h1
