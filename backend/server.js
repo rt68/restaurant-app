@@ -30,9 +30,9 @@ app.use("/api/users", require('./routes/api/users'))
 
 // Protect the API routes below from anonymous users
 // const ensureLoggedIn = require('./config/ensureLoggedIn');
-app.use('/api/items', require('./routes/api/items'));
+app.use('/api/items',ensureLoggedIn, require('./routes/api/items'));
 
-app.use('/api/orders',  require('./routes/api/orders'));
+app.use('/api/orders', ensureLoggedIn, require('./routes/api/orders'));
 //Admin routes
 app.use('/api/admin', require('./routes/api/adminRoutes'));
 
