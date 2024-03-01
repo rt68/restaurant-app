@@ -45,6 +45,6 @@ export default function MenuListItem({ menuItems }) {
   //   </div>
   // );
 
-console.log(items);
-  return <main className={styles.MenuListItem}>{items}</main>;}
+// console.log(items);
+//   return <main className={styles.MenuListItem}>{items}</main>;}
 

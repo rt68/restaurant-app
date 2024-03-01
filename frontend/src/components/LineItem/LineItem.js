@@ -6,7 +6,7 @@ export default function LineItem({ lineItem, isPaid, handleChangeQty }) {
   return (
     <div className={styles.LineItem}>
       {/* <div className="flex-ctr-ctr">{lineItem.item.img}</div> */}
-      <div className={styles.itemName}>
+      <div >
         <span >{lineItem.item.name}</span>
         {/* <span>{lineItem.item.price}</span> */}
         {/* <span>{lineItem.item.price.toFixed(2)}</span> */}
@@ -29,7 +29,9 @@ export default function LineItem({ lineItem, isPaid, handleChangeQty }) {
           <button
             className={styles.button}
             onClick={() => handleChangeQty( lineItem.item._id, lineItem.qty + 1)}
-          >+ </button>
+          >
+            +
+          </button>
         )}
       </div>
       <div className={styles.extPrice}>${lineItem.extPrice.toFixed(2)}</div>

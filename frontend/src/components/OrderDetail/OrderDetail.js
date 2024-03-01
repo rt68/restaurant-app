@@ -24,12 +24,12 @@ export default function OrderDetail({
       <div className={styles.sectionHeading}>
         {order.isPaid ? (
           <span>
-            ORDER <span className="smaller">{order.orderId}</span>
+            ORDER ID  <span className="smaller">{order.orderId}{"  "}</span>
           </span>
         ) : (
           <span>NEW ORDER </span>
         )}
-        <span>{new Date(order.updatedAt).toLocaleDateString()}</span>
+        <span>{ new Date(order.updatedAt).toLocaleDateString()}</span>
       </div>
       <div
         className={`${styles.lineItemContainer} flex-ctr-ctr flex-col scroll-y`}
@@ -37,27 +37,29 @@ export default function OrderDetail({
         {lineItems.length ? (
           <>
             {lineItems}
-            <section className={styles.total}>
+            <section >
               {order.isPaid ? (
-                <span className={styles.right}>TOTAL&nbsp;&nbsp;</span>
+                <span className={styles.right}>&nbsp;&nbsp;</span>
               ) : (
                 <button
-                  className="btn-sm"
+                  className={styles.button}
                   onClick={handleCheckout}
                   disabled={!lineItems.length}
                 >
-                  CHECKOUT
+                  CHECK OUT
                 </button>
               )}
-              <br/>
-              <span>{order.totalQty}</span>
+             <div className={styles.total}>
+              <span>Total: </span>
+              <span >{order.totalQty}</span>
               <span className={styles.right}>
                 ${order.orderTotal.toFixed(2)}
               </span>
+              </div>
             </section>
           </>
         ) : (
-          <div className={styles.hungry}>Hungry?</div>
+          <div className={styles.hungry}>Drooling?</div>
         )}
       </div>
     </div>
