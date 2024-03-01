@@ -5,16 +5,18 @@
 
 .group {
     font-family:'Gill Sans MT';
-    padding: 5% 10% 10% 10%;
 }
 
 .p { 
     text-align: center;
     line-height: 2;
-    padding-top: 5%;
+    padding-top: 15px;
+    font-size:larger;
+    width: 60%;
+    margin: 0 auto;
 }
 
-.h2 {
+.h1 {
     text-align: center;
     margin-top: 2em;
 }

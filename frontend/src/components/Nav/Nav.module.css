@@ -1,6 +1,5 @@
 nav{
     background: url("https://res.cloudinary.com/dxh60x8dq/image/upload/v1709171777/Ramen%20Time%20Images/image_hvgccx.png");
-
     width: 100%;
     height: 220px;
     background-size:cover;
@@ -8,22 +7,17 @@ nav{
     opacity:100%;
     align-items: center; /* Center vertically */
     justify-content: flex-end; /* Center horizontally and create space between items */
+    position: sticky;
 }
 
 .links1{
-    margin: 0 30px;
     text-align: center;
     text-decoration: none;
     font-weight: 500;
-    background-color: rgb(199, 9, 9);
-    padding: 1px 3px;
-    color: rgb(224, 220, 208);
-    border: 2px solid rgb(199, 9, 9);
-    border-radius: 1px;
     cursor: pointer;
     font-size: 18px;
     transition: background-color 0.3s ease;
-    /* margin: 0 30px; */
+    border-radius: 30px;
 }
 
 .links2{
@@ -34,12 +28,6 @@ nav{
     text-align: center;
     text-decoration: none;
     font-weight: 500;
-    background-color: rgb(199, 9, 9);
-    padding: 1px 3px;
-    margin: 0 30px;
-    color: rgb(224, 220, 208);
-    border: 2px solid rgb(199, 9, 9);
-    border-radius: 1px;
     cursor: pointer;
     font-size: 18px;
     transition: background-color 0.3s ease;
@@ -47,36 +35,23 @@ nav{
 }
 
 .links4{
-    margin: 0 30px;
     text-align: center;
     text-decoration: none;
     font-weight: 500;
-    background-color: rgb(199, 9, 9);
-    padding: 1px 3px;
-    color: rgb(224, 220, 208);
-    border: 2px solid rgb(199, 9, 9);
-    border-radius: 1px;
     cursor: pointer;
     font-size: 18px;
     transition: background-color 0.3s ease;
-    /* margin: 0 30px; */
     order: 1;
 }
 
 .links4 :hover{
-    background-color:rgb(199, 9, 9);
+    background-color:var(--red);
   }
 
 .links5{
-    margin: 0 30px;
     text-align: center;
     text-decoration: none;
     font-weight: 500;
-    background-color: rgb(199, 9, 9);
-    padding: 1px 3px;
-    color: rgb(224, 220, 208);
-    border: 2px solid rgb(199, 9, 9);
-    border-radius: 1px;
     cursor: pointer;
     font-size: 18px;
     transition: background-color 0.3s ease;
@@ -84,44 +59,45 @@ nav{
 }
 
 .links6{
-    margin: 0 30px;
     text-align: center;
     text-decoration: none;
     font-weight: 500;
-    background-color: rgb(199, 9, 9);
-    padding: 1px 3px;
-    color: rgb(224, 220, 208);
-    border: 2px solid rgb(199, 9, 9);
-    border-radius: 1px;
     cursor: pointer;
     font-size: 18px;
     transition: background-color 0.3s ease;
-    margin: 0 30px;
 }
 
 .helloDiv{
-    background-color:rgb(224, 220, 208) ;
-    color: rgb(199, 9, 9);
+    position:absolute;
+    top: 20px;
+    /* background-color:rgba(6, 6, 6) ; */
+    color: white;
     align-self: flex-start;
     order: -2;
-    font-size: larger;
+    font-size: 35px;
     font-weight: 500;
     margin: 0 30px;
-    opacity: 75%;
 }
 
 .logo {
-    margin: 0 30px;
     text-align: center;
     text-decoration: none;
-    font-weight: 500;
-    background-color: rgb(199, 9, 9);
-    padding: 1px 3px;
-    color: rgb(224, 220, 208);
-    border: 2px solid rgb(199, 9, 9);
+    font-weight: 500;  
     border-radius: 1px;
     cursor: pointer;
     font-size: 18px;
     transition: background-color 0.3s ease;
     order: -1;
+}
+
+.links1, .links3, .links4, .links5, .links6, .logo{
+    padding: 12px 15px; 
+    border-radius: 30px;
+    margin-right: 20px;
+    background-color: var(--red);
+    color: var(--base-color);
+}
+
+.links1:hover, .links3:hover, .links4:hover, .links5:hover, .links6:hover, .logo:hover{
+   padding: 17px 20px;
 }
