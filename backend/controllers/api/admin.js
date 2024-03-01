@@ -1,3 +1,5 @@
+//controllers/api/admin.js
+
 const User = require('../../models/User'); 
 
 const adminController = {
