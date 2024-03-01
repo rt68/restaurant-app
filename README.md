@@ -4,11 +4,13 @@
 
 Welcome to the inaugural project by **BAM JR Development** – a vibrant and innovative team consisting of Brianna, Anna, Mishelle, Juan, and Ran. We are thrilled to be embarking on a transformative journey, where our passion for technology and creativity culminates in the development of a fully functional restaurant website.
 
-![alt text](image-1.png)## Vision
+![alt text](image-1.png)
+## Vision
 
 As a cohesive team, we are dedicated to revamping our client's restaurant website, not just to elevate its aesthetic appeal but to incorporate a suite of essential features that cater to the modern-day restaurant patrons and managers. We understand the critical role of technology in the culinary experience and are committed to crafting a platform that is both intuitive and comprehensive.
 
-![alt text](image-2.png)## Project Overview
+![alt text](image-2.png)
+## Project Overview
 
 Our project encompasses a complete overhaul of the existing website, which is a static webpage, and introduces a range of functionalities:
 
@@ -30,7 +32,8 @@ Our project encompasses a complete overhaul of the existing website, which is a 
 - As a manager, I want to access customer data and order history, so that I can create targeted promotions and improve customer satisfaction.
 - As a manager, I want to generate reports on sales, popular items, and customer feedback, so that I can make informed decisions about the business.
 
-![alt text](image-3.png)## Meet the Software Engineering Team
+![alt text](image-3.png)
+## Meet the Software Engineering Team
 
 1. Brianna Steele
 2. Anna Bowen
@@ -38,7 +41,8 @@ Our project encompasses a complete overhaul of the existing website, which is a 
 4. Juan Liu
 5. Ran Tu
 
-![alt text](image-4.png)## Background
+![alt text](image-4.png)
+## Background
 
 The BAM JR Ramen Time project was initiated by a group of Per Scholas WISE (Women in Software Engineering) fellows, who want to hone in their software engineering skills while making a meaningful contribution to their community. This endeavor was accomplished through a process that closely mirrored agile methodology, emphasizing collaboration among peers and stakeholders.
 
@@ -46,7 +50,8 @@ This approach provided a dynamic and responsive development environment, allowin
 
 For inquiries or further information, please contact us at BAM JR Development – bristeele99@gmail.com, anna.bowen16@gmail.com, essermishelle@gmail.com, liujuan0616@gmail.com, ran.turx2@gmail.com
 
-![alt text](image-5.png)## Technologies Used
+![alt text](image-5.png)
+## Technologies Used
 HTML | CSS | JavaScript | MongoDB | Express | React | Node.| Mongoose | Bcrypt | JSON Webtoken | 
   Trello Board, ERD Dataflow and Schema Diagrams
  
@@ -77,3 +82,6 @@ HTML | CSS | JavaScript | MongoDB | Express | React | Node.| Mongoose | Bcrypt |
  ![alt text](image-16.png)
 
 Admin Dashboard
+
+Payments
+OAuth
