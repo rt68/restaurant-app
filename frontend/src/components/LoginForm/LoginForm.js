@@ -47,7 +47,7 @@ const LoginForm = ({ setUser }) => {
   };
 
   return (
-    <div className="login-form">
+    <div className={styles.Login}>
       <div className="form-container">
         <form autoComplete="off" onSubmit={handleSubmit}>
           {/* <label>Email:</label> */}

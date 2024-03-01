@@ -1,16 +1,23 @@
 .divContainer{
     align-items: center;
+<<<<<<< HEAD
     height: 100vh;
+=======
+    height: 69vh;
+    width: 70%;
+    margin: 0 auto;
+>>>>>>> fe59f163fa1d6d5a7c1efef574a0dbb25e034fe2
 
 }
 
-.time1{
-    
+ .hours{
     text-align: center;
 }
 
-.hours{
-    font-size:x-large;
-}
+.divContainer p{
+    text-align: center;
+    font-size: larger;
+    line-height: 50px;
 
+}
 

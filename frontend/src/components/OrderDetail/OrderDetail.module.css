@@ -4,7 +4,11 @@
     align-items: center;
     padding: 3vmin;
     font-size: 2vmin;
+<<<<<<< HEAD
     color: var(--text-black);
+=======
+    color: black;
+>>>>>>> fe59f163fa1d6d5a7c1efef574a0dbb25e034fe2
   }
   
   .OrderDetail .sectionHeading {
@@ -23,7 +27,7 @@
     display: grid;
     grid-template-columns: 11.35vw 8.25vw 8.25vw;
     padding: 1vmin 0;
-    color: var(--text-light);
+    color: black;
     border-top: 0.1vmin solid var(--tan-3);
   }
   

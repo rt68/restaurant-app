@@ -15,11 +15,16 @@ export default function MenuListItem({ menuItems }) {
       <h1>${item.price}</h1>
     </div>
   ));
+<<<<<<< HEAD
 
   return <main className={styles.MenuListItem}>{items}</main>;
 }
 
 // return (
+=======
+  return <main className={styles.MenuListItem}>{items}</main>;
+}
+>>>>>>> fe59f163fa1d6d5a7c1efef574a0dbb25e034fe2
 
 //   <div className={styles.MenuListItem}>
 //     <Link to={`/menu/category/${menuItems._id}`} className="menu-item-link">

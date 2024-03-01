@@ -2,13 +2,11 @@ import { useState } from "react";
 import LoginForm from "../../components/LoginForm/LoginForm";
 import SignUpForm from "../../components/SignUpForm/SignUpForm";
 import styles from "./Auth.module.css";
-
 export default function Auth({ setUser }) {
   const [showLogin, setShowLogin] = useState(true);
-
   return (
     <div>
-      <div className={styles.container} style={{ marginTop: "0px" }}>
+      <div className={styles.container} style={{ marginTop: "40px" }}>
         <div className={styles.content} style={{ marginTop: "50px" }}>
           <div className={styles.login}>
             <div className={styles.header}>
