@@ -1,0 +1,127 @@
+nav{
+    background: url("https://res.cloudinary.com/dxh60x8dq/image/upload/v1709171777/Ramen%20Time%20Images/image_hvgccx.png");
+
+    width: 100%;
+    height: 150px;
+    background-size:cover;
+    display:flex;
+    opacity:100%;
+    align-items: center; /* Center vertically */
+    justify-content: flex-end; /* Center horizontally and create space between items */
+}
+
+.links1{
+    margin: 0 30px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    background-color: rgb(199, 9, 9);
+    padding: 1px 3px;
+    color: rgb(224, 220, 208);
+    border: 2px solid rgb(199, 9, 9);
+    border-radius: 1px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    /* margin: 0 30px; */
+}
+
+.links2{
+    order:1;
+}
+
+.links3 {
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    background-color: rgb(199, 9, 9);
+    padding: 1px 3px;
+    margin: 0 30px;
+    color: rgb(224, 220, 208);
+    border: 2px solid rgb(199, 9, 9);
+    border-radius: 1px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    order:-1;
+}
+
+.links4{
+    margin: 0 30px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    background-color: rgb(199, 9, 9);
+    padding: 1px 3px;
+    color: rgb(224, 220, 208);
+    border: 2px solid rgb(199, 9, 9);
+    border-radius: 1px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    /* margin: 0 30px; */
+    order: 1;
+}
+
+.links4 :hover{
+    background-color:rgb(199, 9, 9);
+  }
+
+.links5{
+    margin: 0 30px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    background-color: rgb(199, 9, 9);
+    padding: 1px 3px;
+    color: rgb(224, 220, 208);
+    border: 2px solid rgb(199, 9, 9);
+    border-radius: 1px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    order:-1;
+}
+
+.links6{
+    margin: 0 30px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    background-color: rgb(199, 9, 9);
+    padding: 1px 3px;
+    color: rgb(224, 220, 208);
+    border: 2px solid rgb(199, 9, 9);
+    border-radius: 1px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin: 0 30px;
+}
+
+.helloDiv{
+    background-color:rgb(224, 220, 208) ;
+    color: rgb(199, 9, 9);
+    align-self: flex-start;
+    order: -2;
+    font-size: larger;
+    font-weight: 500;
+    margin: 0 30px;
+    opacity: 75%;
+}
+
+.logo {
+    margin: 0 30px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    background-color: rgb(199, 9, 9);
+    padding: 1px 3px;
+    color: rgb(224, 220, 208);
+    border: 2px solid rgb(199, 9, 9);
+    border-radius: 1px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    order: -1;
+}

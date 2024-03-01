@@ -9,4 +9,3 @@ function checkRole(requiredRole) {
   }
   
   module.exports = checkRole;
-  

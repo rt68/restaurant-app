@@ -1,8 +1,8 @@
 import styles from "./MenuListItem.module.css";
 import { Link } from "react-router-dom";
-export default function MenuListItem({ menuItems, handleAddToOrder }) {
-  const items = menuItems.map((item) => (
-    <div>
+export default function MenuListItem({ menuItems }) {
+  const items = menuItems.map((item, _id) => (
+    <div key={_id}>
       {item.img && (
         <img
           src={item.img}
@@ -16,7 +16,8 @@ export default function MenuListItem({ menuItems, handleAddToOrder }) {
     </div>
   ));
 
-  return <main className={styles.MenuList}>{items}</main>;
+
+  return <main className={styles.MenuListItem}>{items}</main>;}
 
   // return (
 
@@ -43,4 +44,7 @@ export default function MenuListItem({ menuItems, handleAddToOrder }) {
   //     </div>
   //   </div>
   // );
-}
+
+// console.log(items);
+//   return <main className={styles.MenuListItem}>{items}</main>;}
+
