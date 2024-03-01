@@ -22,14 +22,16 @@ export default function MenuList({ menuItems, handleAddToOrder }) {
         <img
           src={item.img}
           alt={item.name}
-          style={{ maxWidth: "150px", height: "auto" }}
+          style={{ maxWidth: "250px", height: "auto" , border:"1px solid #648565" }}
         />
       )}
-      <h1>{item.name}</h1>
-      <p>{item.description}</p>
-      <h1>${item.price}</h1>
-     <button onClick={()=>handleAddToOrder(item._id)}>ADD</button>
-
+       <button className={styles.add} onClick={()=>handleAddToOrder(item._id)}>ADD</button>
+      <div className={styles.name}>{item.name}</div>
+     
+      <p className={styles.description}>{item.description}</p>
+      <span className={styles.price}>${item.price}</span>
+    
+    
 
 
      {/* onClick={() => handleAddToOrder(menuItems._id) */}
