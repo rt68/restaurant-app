@@ -1,7 +1,7 @@
 .LineItem {
     width: 100%;
     display: grid;
-    grid-template-columns: 3vw 15.35vw 5.75vw 5.25vw;
+    grid-template-columns: 8vw 16.35vw 3.75vw 5.25vw;
     padding: 1vmin 0;
     color: var(--text-light);
     background-color: var(--white);
@@ -17,26 +17,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.3vw;
+    font-size: 1.5vw;
   }
   
   .LineItem .extPrice {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    font-size: 1.3vw;
+    font-size: 1.5vw;
   }
   
   .LineItem .button {
-    padding: 1px 3px;
-    background-color: #94d3ae;
+    padding: 1px 5px;
+    background-color: #648565;
     color: #fff;
-    border: 2px solid #94d3ae;
+    border: 2px solid #648565;
     border-radius: 3px;
     cursor: pointer;
     font-size: 18px;
     transition: background-color 0.3s ease;
-    margin: 0 30px;
+    margin: 0 10px 0 20px;
+   
   }
   .LineItem .button :hover{
     background-color: #27ae60;
