@@ -81,9 +81,9 @@ In Ramen Time, you can sign up or login as a new user. You can also login or sig
  Menu Category
  ![alt text](image-14.png)
  New Order Page
- ![alt text](image-15.png)
+![alt text](<image (1).png>)
  Order History Page
- ![alt text](image-16.png)
+ ![alt text](image-17.png)
 
 Admin Dashboard
 
