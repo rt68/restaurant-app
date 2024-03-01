@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: 8vw 16.35vw 3.75vw 5.25vw;
     padding: 1vmin 0;
-    color: var(--text-light);
+    color: black;
     background-color: var(--white);
     border-top: 0.1vmin solid var(--tan-3);
     font-size: 1.5vw;
@@ -39,7 +39,7 @@
     margin: 0 10px 0 20px;
    
   }
-  .LineItem .button :hover{
+  .LineItem .button:hover{
     background-color: #27ae60;
   }
   .LineItem .itemName {

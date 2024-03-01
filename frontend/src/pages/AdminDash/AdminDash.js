@@ -2,6 +2,7 @@
 
 import React, {useState, useEffect} from "react";
 import * as adminAPI from '../../utilities/admin-api'
+import styles from './AdminDash.module.css'
 
 function AdminDash() {
 
@@ -20,7 +21,7 @@ function AdminDash() {
   
 
   return (
-    <div>
+    <div className={styles.AdminDash}>
       <h1>Admin Dashboard</h1>
       <div>
           {users.map(user => (
