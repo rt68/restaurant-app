@@ -64,6 +64,7 @@ function App() {
       <Route path="/users" element={<Auth setUser={setUser} />} />
     </>
   )}
+  
 </Routes>
 <Footer/>
 </div>

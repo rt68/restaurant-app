@@ -1,18 +1,17 @@
-:root {
+/* :root {
     --base-color: rgb(224, 220, 208);
     --red: rgb(199, 9, 9);
     --green: rgb(33, 88, 33);
     --golden: rgb(173, 131, 26);
     --black: black;
     --text-light: #ffffff; 
-    
     background-repeat: no-repeat;
     position: relative;
     z-index: 1;
-     }
-.form-container {
+     } */
+
+.Login .form-container {
     display: flex;
-    
     margin: auto;
     width: 100px;
     height: 1000px;
@@ -21,7 +20,7 @@
     /* background-color: #eaeaea; */
     border-radius: 2vmin;
   }
-  input,button {
+.Login input, .Login button {
 	width: 20%;
 	height: 35px;
 	margin-top: 25px;
@@ -33,11 +32,11 @@
     font-size: 25px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.input {
+.Login .input {
   width: 20%; 
   max-width: 300px; 
 }
-.form-container button {
+.Login .form-container .Login button {
 	padding: 0;
 	background-color: white;
   color: #014670;
@@ -45,6 +44,6 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.form-container button:hover, input:hover {
+.Login .form-container button:hover input:hover {
 	box-shadow: 3px 3px 3px rgba(1,70,112,.5);
 }

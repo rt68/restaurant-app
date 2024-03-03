@@ -1,6 +1,5 @@
 //utilities/admin-api.js
 
-
 import sendRequest from './send-request';
 
 const BASE_URL = '/api/admin';

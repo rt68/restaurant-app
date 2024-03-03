@@ -5,7 +5,7 @@
     margin: 1vmin 8vmin;
     padding: 2vmin;
    
-    
+
     
 }
     /* .MenuList {
@@ -52,7 +52,6 @@
     
     .MenuList .name {
       font-size: 1.8vw;
-      
-      color: var(--text-light);
+      color: black;
     }
   
