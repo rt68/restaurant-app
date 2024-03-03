@@ -8,20 +8,20 @@ import Nav from "./components/Nav/Nav";
 import Landing from "./pages/Landing/Landing";
 import Auth from "./pages/Auth/Auth";
 import NewOrder from "./pages/NewOrder/NewOrder";
-import CategoryMenu from "./pages/Menu/CategoryMenu";
+import CategoryMenu from "./pages/Menu/CategoryMenu"
 import MenuListItem from "./components/MenuListItem/MenuListItem";
 import OrderHistory from "./pages/OrderHistory/OrderHistory";
 import AdminDash from "./pages/AdminDash/AdminDash";
-import Footer from "./components/Footer/Footer";
-import About from "./pages/About/About";
+import Footer from './components/Footer/Footer'
+import About from './pages/About/About'
 function App() {
   const [user, setUser] = useState(getUser());
   const [activeCat, setActiveCat] = useState("");
   const [menuItems, setMenuItems] = useState([]);
-  //Admin
-  ////////////////////////////////////////////////////////////////////////////////////
-  const [role, setRole] = useState("");
-  ////////////////////////////////////////////////////////////////////////////////////
+//Admin
+////////////////////////////////////////////////////////////////////////////////////
+  const [role, setRole]=useState("");
+////////////////////////////////////////////////////////////////////////////////////
   const categoriesRef = useRef([]);
   useEffect(function () {
     async function getItems() {
@@ -36,11 +36,10 @@ function App() {
     getItems();
   }, []);
   ///////////////////////////////////////////////////////////////////////////////////////
-  useEffect(() => {
-    if (user) {
-      setRole(user.role || "");
-    }
-  }, [user]);
+  useEffect(()=>{if(user){
+    setRole(user.role || "");
+  }
+  }, [user])
   ///////////////////////////////////////////////////////////////////////////////////////
   return (
     <div className="App">
@@ -63,6 +62,7 @@ function App() {
       <Route path="/menu" element={<CategoryMenu user={user} categories={categoriesRef.current} activeCat={activeCat} setActiveCat={setActiveCat} />} />
       <Route path="/menu/:categoryId" element={<MenuListItem menuItems={menuItems.filter((item) => item.category.name === activeCat)} />} />
       <Route path="/users" element={<Auth setUser={setUser} />} />
+      <Route path="/orders/new" element={<NewOrder user={user} setUser={setUser} />} />
     </>
   )}
   
@@ -71,5 +71,4 @@ function App() {
 </div>
   );
 }
-
 export default App;
