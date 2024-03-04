@@ -1,14 +1,9 @@
 .Footer {
-<<<<<<< HEAD
-  background-color: white;
-  font-family: 'Gill Sans MT';
-=======
   background-color: var(--golden);
   font-family: 'Gill Sans MT';
   color: var(--black);
   /* position: sticky; */
 
->>>>>>> fe59f163fa1d6d5a7c1efef574a0dbb25e034fe2
 }
 .horizontalList {
   display: flex;
@@ -20,15 +15,8 @@
   align-items: center;
   text-align: center;
 }
-<<<<<<< HEAD
-ul li {
-  list-style: none;
-}
-a {
-=======
 
 .Footer a {
->>>>>>> fe59f163fa1d6d5a7c1efef574a0dbb25e034fe2
   text-decoration: none;
   color: black;
 }

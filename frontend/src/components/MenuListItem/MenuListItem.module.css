@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-.MenuListItem {
-  background-color: var(--tan-1);
-   /* border-right: 0.1vmin solid white; */
-  border-radius: 2vmin;
-  margin: 1vmin 8vmin;
-  padding: 2vmin;
-}
-  /* .MenuListItem {
-=======
 /* .MenuListItem {
->>>>>>> fe59f163fa1d6d5a7c1efef574a0dbb25e034fe2
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -48,9 +37,7 @@
     font-size: 1.8vw;
     color: var(--text-light);
   }
-<<<<<<< HEAD
-=======
-   */
+   
 
    .MenuListItem {
     background-color: var(--tan-1);
@@ -98,4 +85,3 @@
       font-size: 1.8vw;
       color: var(--text-light);
     }
->>>>>>> fe59f163fa1d6d5a7c1efef574a0dbb25e034fe2

@@ -14,14 +14,6 @@ nav{
     text-align: center;
     text-decoration: none;
     font-weight: 500;
-<<<<<<< HEAD
-    background-color: rgb(199, 9, 9);
-    padding: 1px 3px;
-    color: rgb(224, 220, 208);
-    border: 2px solid rgb(199, 9, 9);
-    border-radius: 2vmin;
-=======
->>>>>>> fe59f163fa1d6d5a7c1efef574a0dbb25e034fe2
     cursor: pointer;
     font-size: 18px;
     transition: background-color 0.3s ease;
@@ -37,15 +29,6 @@ nav{
     text-align: center;
     text-decoration: none;
     font-weight: 500;
-<<<<<<< HEAD
-    background-color: rgb(199, 9, 9);
-    padding: 1px 3px;
-    margin: 0 30px;
-    color: rgb(224, 220, 208);
-    border: 2px solid rgb(199, 9, 9);
-    border-radius: 2vmin;;
-=======
->>>>>>> fe59f163fa1d6d5a7c1efef574a0dbb25e034fe2
     cursor: pointer;
     font-size: 18px;
     transition: background-color 0.3s ease;
@@ -56,14 +39,6 @@ nav{
     text-align: center;
     text-decoration: none;
     font-weight: 500;
-<<<<<<< HEAD
-    background-color: rgb(199, 9, 9);
-    padding: 1px 3px;
-    color: rgb(224, 220, 208);
-    border: 2px solid rgb(199, 9, 9);
-    border-radius: 2vmin;
-=======
->>>>>>> fe59f163fa1d6d5a7c1efef574a0dbb25e034fe2
     cursor: pointer;
     font-size: 18px;
     transition: background-color 0.3s ease;
@@ -78,14 +53,6 @@ nav{
     text-align: center;
     text-decoration: none;
     font-weight: 500;
-<<<<<<< HEAD
-    background-color: rgb(199, 9, 9);
-    padding: 1px 3px;
-    color: rgb(224, 220, 208);
-    border: 2px solid rgb(199, 9, 9);
-    border-radius: 2vmin;
-=======
->>>>>>> fe59f163fa1d6d5a7c1efef574a0dbb25e034fe2
     cursor: pointer;
     font-size: 18px;
     transition: background-color 0.3s ease;
@@ -96,14 +63,6 @@ nav{
     text-align: center;
     text-decoration: none;
     font-weight: 500;
-<<<<<<< HEAD
-    background-color: rgb(199, 9, 9);
-    padding: 1px 3px;
-    color: rgb(224, 220, 208);
-    border: 2px solid rgb(199, 9, 9);
-    border-radius: 2vmin;
-=======
->>>>>>> fe59f163fa1d6d5a7c1efef574a0dbb25e034fe2
     cursor: pointer;
     font-size: 18px;
     transition: background-color 0.3s ease;
@@ -124,17 +83,8 @@ nav{
 .logo {
     text-align: center;
     text-decoration: none;
-<<<<<<< HEAD
-    font-weight: 500;
-    background-color: rgb(199, 9, 9);
-    padding: 1px 3px;
-    color: rgb(224, 220, 208);
-    border: 2px solid rgb(199, 9, 9);
-    border-radius: 2vmin;
-=======
     font-weight: 500;  
     border-radius: 1px;
->>>>>>> fe59f163fa1d6d5a7c1efef574a0dbb25e034fe2
     cursor: pointer;
     font-size: 18px;
     transition: background-color 0.3s ease;

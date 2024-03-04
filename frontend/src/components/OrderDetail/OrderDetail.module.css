@@ -4,11 +4,7 @@
     align-items: center;
     padding: 3vmin;
     font-size: 2vmin;
-<<<<<<< HEAD
-    color: var(--text-black);
-=======
     color: black;
->>>>>>> fe59f163fa1d6d5a7c1efef574a0dbb25e034fe2
   }
   
   .OrderDetail .sectionHeading {
