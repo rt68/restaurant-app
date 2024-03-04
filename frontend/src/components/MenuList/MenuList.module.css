@@ -8,7 +8,7 @@
     
     
 }
-    /* .MenuList {
+    .MenuList {
       width: 100%;
       display: flex;
       justify-content: space-between;
@@ -21,7 +21,7 @@
       border-radius: 1vmin;
       font-size: 4vmin;
     }
-     */
+    
     
     
   .MenuList .description{

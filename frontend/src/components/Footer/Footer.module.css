@@ -1,12 +1,16 @@
 .Footer {
-  background-color: rgb(224, 220, 208); 
+  background-color: white; 
   font-family: 'Gill Sans MT';
-  padding: 1em;
-  margin: 2% 2% 2% 2%;
-  list-style: none;
-  border: solid black 1px;
-
 }
+
+.horizontalList {
+  display: flex;
+  justify-content: space-around; 
+  padding:1%;
+  font-size: 20px;
+}
+
+
 
 .listContainer {
   align-items: center;
@@ -15,12 +19,9 @@
 
 ul li {
   list-style: none;
-  line-height: 2;
 }
 
-.storeName {
-  text-align: center;
-}
+
 
 a {
   text-decoration: none;

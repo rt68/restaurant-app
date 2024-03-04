@@ -1,13 +1,13 @@
-.divContainer{
+.About .divContainer{
     align-items: center;
 }
 
-.time1{
+.About .time1{
     
     text-align: center;
 }
 
-.hours{
+.About .hours{
     font-size:x-large;
 }
 
