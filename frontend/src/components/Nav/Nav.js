@@ -23,7 +23,7 @@ export default function Nav({ user, setUser }) {
           </Link>
           {user.role === 'admin' && (
             <>
-              <Link className={styles.links6}to="/admin">Admin Dashboard</Link> &nbsp; | &nbsp;
+              <Link className={styles.links6} to="/admin">Admin Dashboard</Link> &nbsp; | &nbsp;
             </>
           )}
         </>

@@ -14,20 +14,15 @@ import OrderHistory from "./pages/OrderHistory/OrderHistory";
 import AdminDash from "./pages/AdminDash/AdminDash";
 import Footer from './components/Footer/Footer'
 import About from './pages/About/About'
-
 function App() {
   const [user, setUser] = useState(getUser());
   const [activeCat, setActiveCat] = useState("");
   const [menuItems, setMenuItems] = useState([]);
-
-//Admin 
+//Admin
 ////////////////////////////////////////////////////////////////////////////////////
   const [role, setRole]=useState("");
-
 ////////////////////////////////////////////////////////////////////////////////////
-
   const categoriesRef = useRef([]);
-
   useEffect(function () {
     async function getItems() {
       const items = await itemsAPI.getAll();
@@ -40,14 +35,12 @@ function App() {
     }
     getItems();
   }, []);
-
   ///////////////////////////////////////////////////////////////////////////////////////
   useEffect(()=>{if(user){
     setRole(user.role || "");
   }
   }, [user])
   ///////////////////////////////////////////////////////////////////////////////////////
-
   return (
     <div className="App">
       <Nav user={user} setUser={setUser} />
@@ -69,12 +62,13 @@ function App() {
       <Route path="/menu" element={<CategoryMenu user={user} categories={categoriesRef.current} activeCat={activeCat} setActiveCat={setActiveCat} />} />
       <Route path="/menu/:categoryId" element={<MenuListItem menuItems={menuItems.filter((item) => item.category.name === activeCat)} />} />
       <Route path="/users" element={<Auth setUser={setUser} />} />
+      <Route path="/orders/new" element={<NewOrder user={user} setUser={setUser} />} />
     </>
   )}
+  
 </Routes>
 <Footer/>
 </div>
   );
 }
-
 export default App;

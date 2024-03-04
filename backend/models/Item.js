@@ -1,4 +1,3 @@
-
 // const mongoose = require('mongoose');
 // const Schema = mongoose.Schema;
 // // Ensure the Category model is processed by Mongoose
@@ -17,8 +16,6 @@
 // });
 
 // module.exports = mongoose.model('Item', itemSchema);
-
-
 
 const mongoose = require('mongoose');
 require('./Category');
