@@ -10,6 +10,8 @@ import Auth from "./pages/Auth/Auth";
 import NewOrder from "./pages/NewOrder/NewOrder";
 import CategoryMenu from "./pages/Menu/CategoryMenu";
 import MenuListItem from "./components/MenuListItem/MenuListItem";
+// import MenuItemDetail from "./pages/NewOrder/MenuItemDetails";
+import MenuItemDetail from "./pages/Menu/MenuItemDetails";
 import OrderHistory from "./pages/OrderHistory/OrderHistory";
 import AdminDash from "./pages/AdminDash/AdminDash";
 import Footer from "./components/Footer/Footer";
@@ -46,30 +48,61 @@ function App() {
     <div className="App">
       <Nav user={user} setUser={setUser} />
       <Routes>
-      <Route path="/" element={<Landing />} />
-      <Route path='/about' element={<About/>}/>
-  {(user && user.role === "customer") ? (
-    <>
-      <Route path="/" element={<Landing />} />
-      <Route path="/orders/new" element={<NewOrder user={user} setUser={setUser} />} />
-      <Route path="/orders" element={<OrderHistory user={user} setUser={setUser} />} />
-      <Route path="/*" element={<Navigate to="/orders/new" />} />
-    </>
-  ) : user && user.role === "admin" ? (
-      <Route path="/admin" element={<AdminDash/>}/>
-  ) : (
-    <>
-      <Route path="/" element={<Landing />} />
-      <Route path="/menu" element={<CategoryMenu user={user} categories={categoriesRef.current} activeCat={activeCat} setActiveCat={setActiveCat} />} />
-      <Route path="/menu/:categoryId" element={<MenuListItem menuItems={menuItems.filter((item) => item.category.name === activeCat)} />} />
-      <Route path="/users" element={<Auth setUser={setUser} />} />
-    </>
-  )}
-  
-</Routes>
-<Footer/>
-</div>
+        <Route path="/" element={<Landing />} />
+        <Route path="/about" element={<About />} />
+        {user && user.role === "customer" ? (
+          <>
+            <Route path="/" element={<Landing />} />
+            <Route
+              path="/orders/new"
+              element={<NewOrder user={user} setUser={setUser} />}
+            />
+            <Route
+              path="/orders"
+              element={<OrderHistory user={user} setUser={setUser} />}
+            />
+            <Route path="/*" element={<Navigate to="/orders/new" />} />
+          </>
+        ) : user && user.role === "admin" ? (
+          <Route path="/admin" element={<AdminDash />} />
+        ) : (
+          <>
+            <Route path="/" element={<Landing />} />
+            <Route
+              path="/menu"
+              element={
+                <CategoryMenu
+                  user={user}
+                  categories={categoriesRef.current}
+                  activeCat={activeCat}
+                  setActiveCat={setActiveCat}
+                />
+              }
+            />
+            <Route
+              path="/menu/:categoryId"
+              element={
+                <MenuListItem
+                  menuItems={menuItems.filter(
+                    (item) => item.category.name === activeCat
+                  )}
+                />
+              }
+            />
+            {/*updated by Mishelle  */}
+            <Route path="/menu/:itemId" element={<MenuItemDetail />} />
+            {/*  */}
+
+            <Route path="/users" element={<Auth setUser={setUser} />} />
+            <Route
+              path="/orders/new"
+              element={<NewOrder user={user} setUser={setUser} />}
+            />
+          </>
+        )}
+      </Routes>
+      <Footer />
+    </div>
   );
 }
-
 export default App;

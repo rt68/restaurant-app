@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { getAll } from "../../utilities/items-api";
 import { Link } from "react-router-dom";
 import Modal from "../../components/Modal/MenuItemModal";
-import MenuItemDetails from "./MenuItemDetails";
 
 function Menu() {
   // State to store the fetched items
@@ -24,7 +23,6 @@ function Menu() {
     fetchItems();
   }, []); // The empty array ensures this effect runs only once after initial render
   const handleItemClick = (item) => {
-    console.log("Item clicked", item);
     setSelectedItem(item);
     setIsModalOpen(true);
   };
@@ -33,12 +31,10 @@ function Menu() {
       <h1>Menu</h1>
       <ul>
         {items.map((item) => (
-          <li
-            key={item._id}
-            onClick={() => handleItemClick(item)}
-            style={{ cursor: "pointer" }}
-          >
-            {item.name} - {item.price}
+          <li key={item._id}>
+            <Link to={`/menu/${item._id}`}>
+              {item.name} - {item.price}
+            </Link>
           </li>
         ))}
       </ul>
