@@ -34,7 +34,7 @@ function MenuItemDetail() {
     <div>
       <h1>{item.name}</h1>
       {item.description && <h3> {item.description}</h3>}
-      <p>Price: {item.price}</p>
+      <p>Pirce: {item.price}</p>
       {item.img && (
         <img
           src={item.img}
@@ -42,9 +42,7 @@ function MenuItemDetail() {
           style={{ maxWidth: "100%", height: "auto" }}
         />
       )}
-      {/* <button onClick={handleAddToOrder}>Add to Cart</button> */}
-      <button onClick={() => handleAddToOrder(item._id)}>Add to Cart</button>
-
+      <button onClick={handleAddToOrder}>Add to Cart</button>
       <button onClick={handleBackToMenu}>Back to Menu</button>
     </div>
   );
